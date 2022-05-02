@@ -5,6 +5,10 @@ body,html {
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 html * {
     list-style-type: none;
     text-decoration: none;
@@ -21,6 +25,7 @@ html * {
     --white: #FFFFFF;
     --grey: #F6EEED;
     --black: #262626;
+    --red: #CC2952;
 }
 
 
@@ -46,6 +51,7 @@ html * {
     width: 65%;
     padding: 0;
 }
+
 
 header {
     width: 100%;
@@ -236,8 +242,15 @@ header {
 
 footer {
     background-color: var(--brown);
-    padding-top: 192px;
+    /*padding-top: 192px;*/
     position: relative;
+}
+
+footer .form-wrap {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -387,60 +400,55 @@ footer:before {
     margin-left: 6px;
 }
 
+/*indicator--------------------------------------------------------------*/
+
+.count-indicator .circle-wrap {
+    min-width: 42px;
+    min-height: 42px;
+    background: white;
+    border-radius: 50%;
+}
+
+.count-indicator .circle-wrap .circle .mask,
+.count-indicator .circle-wrap .circle .fill {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.count-indicator .circle-wrap .circle .mask {
+    clip: rect(0px, 42px, 42px, 21px);
+}
+
+.count-indicator .circle-wrap .inside-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: white;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: 2px;
+    color: #1e51dc;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
+/* 3rd progress bar */
+.count-indicator .mask .fill {
+    clip: rect(0px, 21px, 42px, 0px);
+    background-color: #CC2952;
+}
 
-/*!*indicator--------------------------------------------------------------*!*/
-
-/*.count-indicator .circle-wrap {*/
-/*    width: 42px;*/
-/*    height: 42px;*/
-/*    background: white;*/
-/*    border-radius: 50%;*/
-/*    border: 1px solid white;*/
-/*}*/
-
-/*.count-indicator .circle-wrap .circle .mask,*/
-/*.count-indicator .circle-wrap .circle .fill {*/
-/*    width: 42px;*/
-/*    height: 42px;*/
-/*    position: absolute;*/
-/*    border-radius: 50%;*/
-/*}*/
-
-/*.count-indicator .circle-wrap .circle .mask {*/
-/*    clip: rect(0px, 42px, 42px, 21px);*/
-/*}*/
-
-/*.count-indicator .circle-wrap .inside-circle {*/
-/*    width: 38px;*/
-/*    height: 38px;*/
-/*    border-radius: 50%;*/
-/*    background: white;*/
-/*    text-align: center;*/
-/*    margin-top: 2px;*/
-/*    margin-left: 2px;*/
-/*    color: #1e51dc;*/
-/*    position: absolute;*/
-/*    z-index: 100;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*.inside-circle img {*/
-/*    width: 100%;*/
-/*    max-width: 18px;*/
-/*}*/
-
-/*!* color animation *!*/
-
-/*!* 3rd progress bar *!*/
-/*.count-indicator .mask .fill {*/
-/*    clip: rect(0px, 21px, 42px, 0px);*/
-/*    background-color: #CC2952;*/
-/*}*/
-
+.inside-circle img{
+    height: 16px;
+    width: 18px;
+    object-fit: contain;
+}
 
 /*modal-----------------------------------------------------------------------*/
 
@@ -537,12 +545,13 @@ footer:before {
 .also-need-help {
     margin-top: 10px;
     width: 100%;
-    border: 1px solid #665A52;
     border-radius: 6px;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--grey);
+    cursor: pointer;
 }
 
 .also-need-help:first-child {
@@ -558,7 +567,7 @@ footer:before {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 1px solid black;
+    object-fit: cover;
 }
 
 .also-left-wrap {
@@ -571,6 +580,7 @@ footer:before {
     font-weight: 600;
     letter-spacing: -0.5px;
     line-height: 20px;
+    position: relative;
 }
 
 .also-price {
@@ -581,6 +591,81 @@ footer:before {
     margin-top: 5px;
 }
 
+.also-indicator .count-indicator {
+    background-color: transparent;
+}
+
+.also-indicator .count-indicator .circle-wrap .inside-circle {
+    background-color: var(--grey);
+    color:var(--lightbrown);
+    font-size: 6px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.also-indicator .count-indicator .circle-wrap .inside-circle span {
+    color: #CC2952;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    text-align: center;
+}
+
+
+.also-indicator .count-indicator .circle-wrap {
+    min-width: 50px;
+    min-height: 50px;
+}
+.also-indicator .count-indicator .circle-wrap .circle .mask,
+.also-indicator .count-indicator .circle-wrap .circle .fill {
+    width: 50px;
+    height: 50px;
+}
+
+.also-indicator .count-indicator .circle-wrap .circle .mask {
+    clip: rect(0px, 50px, 50px, 25px);
+}
+
+.also-indicator .count-indicator .circle-wrap .inside-circle {
+    width: 46px;
+    height: 46px;
+}
+
+
+/* 3rd progress bar */
+.also-indicator .count-indicator .mask .fill {
+    clip: rect(0px, 25px, 50px, 0px);
+}
+
+.also-indicator .mask.full,
+.also-indicator .circle .fill {
+    animation: none;
+    transform: rotate(90deg);
+}
+
+.also-checked {
+    background-color: var(--white);
+    border: 1px solid #665A52;
+}
+
+.also-checked .also-indicator .count-indicator .circle-wrap .inside-circle {
+    background-color: var(--white);
+}
+
+.also-checked .also-title:before{
+    content: url("../img/ic-checkmark.svg");
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 .more {
     margin-top: 10px;
     color: var(--orange);
@@ -590,6 +675,7 @@ footer:before {
     line-height: 24px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .more svg {
@@ -648,4 +734,51 @@ footer:before {
 
 .mathematics-btn:last-child {
     background-color: var(--lightbrown);
+}
+
+
+/*custom-js-class------------------------------------------------------------*/
+
+.display-none-class {
+    display: none;
+}
+
+/*breadcrumb------------------------------------------------------------*/
+
+.breadcrumb {
+    margin: 0;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.breadcrumb:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: -100%;
+    height: 1px;
+    background-color: var(--grey);
+    z-index: 1001;
+}
+
+.breadcrumb-item a {
+    color: var(--lightbrown);
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.breadcrumb-item.active {
+    color: var(--lightbrown);
+    opacity: 0.8;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+    padding-left: 6px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '»';
+    padding-right: 6px
 }
