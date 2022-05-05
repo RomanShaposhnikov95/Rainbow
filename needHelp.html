@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/homePage.css">
-    <link rel="stylesheet" href="css/needHelpCss.css">
+    <link rel="stylesheet" href="css/needHelp.css">
     <title>Document</title>
 </head>
 <body>
@@ -79,12 +79,14 @@
             </ol>
         </nav>
 
-        <h1 class="title-xl">Нуждаются в помощи</h1>
+        <div class="subheader-info">
+            <h1 class="title-xl">Нуждаются в помощи</h1>
 
-        <div class="descr">
-            Любой гражданин или благотворительная организация может обратиться за
-            помощью к благотворительной организации, если потребность является срочной,
-            и заявитель не может решить ситуацию самостоятельно или с помощью семейных ресурсов.
+            <div class="descr">
+                Любой гражданин или благотворительная организация может обратиться за
+                помощью к благотворительной организации, если потребность является срочной,
+                и заявитель не может решить ситуацию самостоятельно или с помощью семейных ресурсов.
+            </div>
         </div>
     </div>
 </div>
@@ -1278,8 +1280,10 @@
                 </label>
                 <button type="submit" class="btn">Пожертвовать • <span class="donateSum">0</span> ₽</button>
                 <div class="descr">
-                    * Нажимая на кнопку "Помочь детям", вы принимаете условия использования
-                    и даете согласие на обработку персональных данных.
+                    <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
+                    <a href="#" class="info-link">условия использования</a>
+                    и даете согласие на обработку
+                    <a href="#" class="info-link">персональных данных</a>.
                 </div>
             </form>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1287,7 +1291,24 @@
     </div>
 </div>
 
+<div id="up" class="up">
+    <svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>51436250-68AA-480C-B88D-6B7D48F8EFD9</title>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+            <g id="19.-Completed-projects" transform="translate(-1722.000000, -845.000000)" stroke="#FF5500" stroke-width="2">
+                <g id="Button---To-top" transform="translate(1700.000000, 820.000000)">
+                    <g id="Icon" transform="translate(22.000000, 25.000000)">
+                        <polyline id="Path-4" points="15 8 8 1 1 8"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </svg>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="js/indicator.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>

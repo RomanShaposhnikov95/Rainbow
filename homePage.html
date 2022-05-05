@@ -365,24 +365,24 @@
                 оценке дизайна и композиции читаемый текст мешает
                 сосредоточиться. Lorem Ipsum используют потому,
             </div>
-            <form>
-                <div class="form-top">
+            <form id="form" class="form">
+                <div class="form-top form-container">
                     <div class="form-money-group">
                         <h3 class="form-title required">
                             Выберите сумму пожертвования
                         </h3>
-                        <div class="switch-field">
-                            <input type="radio" id="radio-one-hundred" name="switch-two" value="100" checked/>
+                        <div class="switch-field switch-field-count">
+                            <input class="switch-count" type="radio" id="radio-one-hundred" name="switch-two" value="100" />
                             <label for="radio-one-hundred">100 <span class="currency">₽</span></label>
-                            <input type="radio" id="radio-three-hundred" name="switch-two" value="300" />
+                            <input class="switch-count" type="radio" id="radio-three-hundred" name="switch-two" value="300" />
                             <label for="radio-three-hundred">300 <span class="currency">₽</span></label>
-                            <input type="radio" id="radio-five-hundred" name="switch-two" value="500" />
+                            <input class="switch-count" type="radio" id="radio-five-hundred" name="switch-two" value="500" />
                             <label for="radio-five-hundred">500 <span class="currency">₽</span></label>
-                            <input type="radio" id="radio-one-thousand" name="switch-two" value="1000" />
+                            <input class="switch-count" type="radio" id="radio-one-thousand" name="switch-two" value="1000" />
                             <label for="radio-one-thousand">1000 <span class="currency">₽</span></label>
-                            <input type="radio" id="radio-two-thousand-five-hundred" name="switch-two" value="2500" />
+                            <input class="switch-count" type="radio" id="radio-two-thousand-five-hundred" name="switch-two" value="2500" />
                             <label for="radio-two-thousand-five-hundred">2 500 <span class="currency">₽</span></label>
-                            <input type="radio" id="radio-five-thousand" name="switch-two" value="5000" />
+                            <input class="switch-count" type="radio" id="radio-five-thousand" name="switch-two" value="5000" />
                             <label for="radio-five-thousand">5000 <span class="currency">₽</span></label>
                         </div>
                     </div>
@@ -404,19 +404,19 @@
                             <h3 class="form-title required">
                                 Ваше имя, фамилия
                             </h3>
-                            <input class="input-text" name="name" type="text" required>
+                            <input id="name" class="input-text" name="name" type="text" >
                         </div>
                         <div class="form-money-group-wrap">
                             <h3 class="form-title required">
                                 Электронная почта
                             </h3>
-                            <input class="input-text" name="name" type="email" required>
+                            <input id="email" class="input-text" name="name" type="email" >
                         </div>
                         <div class="form-money-group-wrap">
                             <h3 class="form-title required">
                                 Ваши комментарии и пожелания
                             </h3>
-                            <textarea class="input-text" name="name" rows="1" required></textarea>
+                            <textarea id="message" class="input-text" name="name" rows="1" ></textarea>
                         </div>
                     </div>
                     <label class="checkbox-container">
@@ -424,10 +424,14 @@
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
-                    <button type="submit" class="btn">Помочь детям • 100 ₽</button>
+                    <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-submit">Помочь детям • <span class="donateSum">0</span> ₽</button>
+<!--                    <button type="submit" class="btn btn-submit">Помочь детям • <span class="donateSum">0</span> ₽</button>-->
+
                     <div class="descr">
-                        * Нажимая на кнопку "Помочь детям", вы принимаете условия использования
-                        и даете согласие на обработку персональных данных.
+                        <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
+                        <a href="#" class="info-link">условия использования</a>
+                        и даете согласие на обработку
+                        <a href="#" class="info-link">персональных данных</a>.
                     </div>
                 </div>
             </form>
@@ -635,8 +639,7 @@
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination">
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -1147,78 +1150,57 @@
 
 
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-img">
-                <img src="img/ic-holding-heart.svg" alt="">
-            </div>
-            <div class="title-l">Пожертвовать</div>
-            <form class="form-container">
-                <div class="form-money-group">
-                    <h3 class="form-title required">
-                        Выберите способ оплаты
-                    </h3>
-                    <div class="switch-field">
-                        <input type="radio" id="swedbank" name="payment" value="swedbank" checked/>
-                        <label for="swedbank"><img src="img/bank/payment-swedbank.svg" alt=""></label>
-                        <input type="radio" id="seb" name="payment" value="seb" />
-                        <label for="seb"><img src="img/bank/payment-seb.svg" alt=""></label>
-                        <input type="radio" id="luminor" name="payment" value="luminor" />
-                        <label for="luminor"><img src="img/bank/payment-luminor.svg" alt=""></label>
-                        <input type="radio" id="citadele" name="payment" value="citadele" />
-                        <label for="citadele"><img src="img/bank/payment-citadele.svg" alt=""></label>
-                        <input type="radio" id="paypal" name="payment" value="2500" />
-                        <label for="paypal"><img src="img/bank/payment-paypal.svg" alt=""></label>
-                        <input type="radio" id="card" name="payment" value="card" />
-                        <label for="card"><img src="img/bank/payment-card.svg" alt=""></label>
-                    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-img">
+                    <img src="img/ic-holding-heart.svg" alt="">
                 </div>
-                <div class="form-money-group">
-                    <h3 class="form-title required">
-                        Выберите сумму пожертвования
-                    </h3>
-                    <div class="input-wrap-container">
-                        <div class="input-wrap">
-                            <input class="input-number" min="1" type="number" required>
-                            <select>
-                                <option value="RUB">₽ (RUB)</option>
-                                <option value="saab">€ (EUR)</option>
-                                <option value="opel">$ (USD)</option>
-                            </select>
+                <div class="title-l">Пожертвовать</div>
+                <form class="form-container form">
+                    <div class="form-money-group">
+                        <h3 class="form-title required justPay">
+                            Выберите способ оплаты
+                        </h3>
+                        <div class="switch-field">
+                            <input type="radio" id="swedbank" name="payment" value="swedbank" checked/>
+                            <label for="swedbank"><img src="img/bank/payment-swedbank.svg" alt=""></label>
+                            <input type="radio" id="seb" name="payment" value="seb" />
+                            <label for="seb"><img src="img/bank/payment-seb.svg" alt=""></label>
+                            <input type="radio" id="luminor" name="payment" value="luminor" />
+                            <label for="luminor"><img src="img/bank/payment-luminor.svg" alt=""></label>
+                            <input type="radio" id="citadele" name="payment" value="citadele" />
+                            <label for="citadele"><img src="img/bank/payment-citadele.svg" alt=""></label>
+                            <input type="radio" id="paypal" name="payment" value="2500" />
+                            <label for="paypal"><img src="img/bank/payment-paypal.svg" alt=""></label>
+                            <input type="radio" id="card" name="payment" value="card" />
+                            <label for="card"><img src="img/bank/payment-card.svg" alt=""></label>
                         </div>
-                        <button type="button" class="mathematics-btn decrement">
-                            <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>1F386BAE-AD43-4116-A03D-794E236537DB</title>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="02.-Homepage---Donate-popup" transform="translate(-1102.000000, -1209.000000)" fill="#665A52">
-                                        <g id="Modal" transform="translate(565.000000, 740.000000)">
-                                            <g id="Content" transform="translate(40.000000, 40.000000)">
-                                                <g id="Payment-amount" transform="translate(0.000000, 376.000000)">
-                                                    <g id="Buttons" transform="translate(480.000000, 36.000000)">
-                                                        <g id="Icon" transform="translate(17.000000, 17.000000)">
-                                                            <path d="M2,7 L14,7 C14.5522847,7 15,7.44771525 15,8 C15,8.55228475 14.5522847,9 14,9 L2,9 C1.44771525,9 1,8.55228475 1,8 C1,7.44771525 1.44771525,7 2,7 Z" id="icon"></path>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </button>
-                        <button type="button" class="mathematics-btn increment">
-                            <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>31DE0AB2-8522-4247-A5CE-8C0BF06DB069</title>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="02.-Homepage---Donate-popup" transform="translate(-1162.000000, -1209.000000)" fill="#FFFFFF">
-                                        <g id="Modal" transform="translate(565.000000, 740.000000)">
-                                            <g id="Content" transform="translate(40.000000, 40.000000)">
-                                                <g id="Payment-amount" transform="translate(0.000000, 376.000000)">
-                                                    <g id="Buttons" transform="translate(480.000000, 36.000000)">
-                                                        <g id="Button" transform="translate(60.000000, 0.000000)">
+                    </div>
+                    <div class="form-money-group justPay">
+                        <h3 class="form-title required">
+                            Выберите сумму пожертвования
+                        </h3>
+                        <div class="input-wrap-container">
+                            <div class="input-wrap">
+                                <input class="input-number" min="1" type="number">
+                                <select>
+                                    <option value="RUB">₽ (RUB)</option>
+                                    <option value="saab">€ (EUR)</option>
+                                    <option value="opel">$ (USD)</option>
+                                </select>
+                            </div>
+                            <button type="button" class="mathematics-btn decrement">
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>1F386BAE-AD43-4116-A03D-794E236537DB</title>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="02.-Homepage---Donate-popup" transform="translate(-1102.000000, -1209.000000)" fill="#665A52">
+                                            <g id="Modal" transform="translate(565.000000, 740.000000)">
+                                                <g id="Content" transform="translate(40.000000, 40.000000)">
+                                                    <g id="Payment-amount" transform="translate(0.000000, 376.000000)">
+                                                        <g id="Buttons" transform="translate(480.000000, 36.000000)">
                                                             <g id="Icon" transform="translate(17.000000, 17.000000)">
-                                                                <path d="M8,1 C8.55228475,1 9,1.44771525 9,2 L8.999,7 L14,7 C14.5522847,7 15,7.44771525 15,8 C15,8.55228475 14.5522847,9 14,9 L8.999,9 L9,14 C9,14.5522847 8.55228475,15 8,15 C7.44771525,15 7,14.5522847 7,14 L6.999,9 L2,9 C1.44771525,9 1,8.55228475 1,8 C1,7.44771525 1.44771525,7 2,7 L6.999,7 L7,2 C7,1.44771525 7.44771525,1 8,1 Z" id="icon"></path>
+                                                                <path d="M2,7 L14,7 C14.5522847,7 15,7.44771525 15,8 C15,8.55228475 14.5522847,9 14,9 L2,9 C1.44771525,9 1,8.55228475 1,8 C1,7.44771525 1.44771525,7 2,7 Z" id="icon"></path>
                                                             </g>
                                                         </g>
                                                     </g>
@@ -1226,179 +1208,200 @@
                                             </g>
                                         </g>
                                     </g>
-                                </g>
-                            </svg>
-                        </button>
+                                </svg>
+                            </button>
+                            <button type="button" class="mathematics-btn increment">
+                                <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <title>31DE0AB2-8522-4247-A5CE-8C0BF06DB069</title>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="02.-Homepage---Donate-popup" transform="translate(-1162.000000, -1209.000000)" fill="#FFFFFF">
+                                            <g id="Modal" transform="translate(565.000000, 740.000000)">
+                                                <g id="Content" transform="translate(40.000000, 40.000000)">
+                                                    <g id="Payment-amount" transform="translate(0.000000, 376.000000)">
+                                                        <g id="Buttons" transform="translate(480.000000, 36.000000)">
+                                                            <g id="Button" transform="translate(60.000000, 0.000000)">
+                                                                <g id="Icon" transform="translate(17.000000, 17.000000)">
+                                                                    <path d="M8,1 C8.55228475,1 9,1.44771525 9,2 L8.999,7 L14,7 C14.5522847,7 15,7.44771525 15,8 C15,8.55228475 14.5522847,9 14,9 L8.999,9 L9,14 C9,14.5522847 8.55228475,15 8,15 C7.44771525,15 7,14.5522847 7,14 L6.999,9 L2,9 C1.44771525,9 1,8.55228475 1,8 C1,7.44771525 1.44771525,7 2,7 L6.999,7 L7,2 C7,1.44771525 7.44771525,1 8,1 Z" id="icon"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="form-money-group">
-                    <h3 class="form-title">
-                        Им тоже нужна помощь
-                    </h3>
-                    <div class="also-wrap-value">
-                        <div class="also-need-help">
-                            <div class="also-left">
-                                <img src="img/child/photo-4.jpg" alt="">
-                                <div class="also-left-wrap">
-                                    <div class="also-title">Худоян Артур</div>
-                                    <div class="also-price">+1 000 ₽ к сумме</div>
+                    <div class="form-money-group justPay">
+                        <h3 class="form-title">
+                            Им тоже нужна помощь
+                        </h3>
+                        <div class="also-wrap-value">
+                            <div class="also-need-help">
+                                <div class="also-left">
+                                    <img src="img/child/photo-4.jpg" alt="">
+                                    <div class="also-left-wrap">
+                                        <div class="also-title">Худоян Артур</div>
+                                        <div class="also-price">+1 000 ₽ к сумме</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="also-indicator">
-                                <div class="count-indicator">
-                                    <div class="circle-wrap">
-                                        <div class="circle">
-                                            <div class="mask full">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="mask half">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="inside-circle">
-                                                ОСТАЛОСЬ
-                                                <span class="inside-circle-precent">25%</span>
+                                <div class="also-indicator">
+                                    <div class="count-indicator">
+                                        <div class="circle-wrap">
+                                            <div class="circle">
+                                                <div class="mask full">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="mask half">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="inside-circle">
+                                                    ОСТАЛОСЬ
+                                                    <span class="inside-circle-precent">25%</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="also-need-help">
-                            <div class="also-left">
-                                <img src="img/child/photo-3.jpg" alt="">
-                                <div class="also-left-wrap">
-                                    <div class="also-title">Худоян Артур</div>
-                                    <div class="also-price">+1 000 ₽ к сумме</div>
+                            <div class="also-need-help">
+                                <div class="also-left">
+                                    <img src="img/child/photo-3.jpg" alt="">
+                                    <div class="also-left-wrap">
+                                        <div class="also-title">Худоян Артур</div>
+                                        <div class="also-price">+1 000 ₽ к сумме</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="also-indicator">
-                                <div class="count-indicator">
-                                    <div class="circle-wrap">
-                                        <div class="circle">
-                                            <div class="mask full">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="mask half">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="inside-circle">
-                                                ОСТАЛОСЬ
-                                                <span class="inside-circle-precent">25%</span>
+                                <div class="also-indicator">
+                                    <div class="count-indicator">
+                                        <div class="circle-wrap">
+                                            <div class="circle">
+                                                <div class="mask full">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="mask half">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="inside-circle">
+                                                    ОСТАЛОСЬ
+                                                    <span class="inside-circle-precent">25%</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="also-need-help">
-                            <div class="also-left">
-                                <img src="img/child/photo-2.jpg" alt="">
-                                <div class="also-left-wrap">
-                                    <div class="also-title">Худоян Артур</div>
-                                    <div class="also-price">+1 000 ₽ к сумме</div>
+                            <div class="also-need-help">
+                                <div class="also-left">
+                                    <img src="img/child/photo-2.jpg" alt="">
+                                    <div class="also-left-wrap">
+                                        <div class="also-title">Худоян Артур</div>
+                                        <div class="also-price">+1 000 ₽ к сумме</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="also-indicator">
-                                <div class="count-indicator">
-                                    <div class="circle-wrap">
-                                        <div class="circle">
-                                            <div class="mask full">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="mask half">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="inside-circle">
-                                                ОСТАЛОСЬ
-                                                <span class="inside-circle-precent">25%</span>
+                                <div class="also-indicator">
+                                    <div class="count-indicator">
+                                        <div class="circle-wrap">
+                                            <div class="circle">
+                                                <div class="mask full">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="mask half">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="inside-circle">
+                                                    ОСТАЛОСЬ
+                                                    <span class="inside-circle-precent">25%</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="also-need-help">
-                            <div class="also-left">
-                                <img src="img/child/photo-4.jpg" alt="">
-                                <div class="also-left-wrap">
-                                    <div class="also-title">Худоян Артур</div>
-                                    <div class="also-price">+1 000 ₽ к сумме</div>
+                            <div class="also-need-help">
+                                <div class="also-left">
+                                    <img src="img/child/photo-4.jpg" alt="">
+                                    <div class="also-left-wrap">
+                                        <div class="also-title">Худоян Артур</div>
+                                        <div class="also-price">+1 000 ₽ к сумме</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="also-indicator">
-                                <div class="count-indicator">
-                                    <div class="circle-wrap">
-                                        <div class="circle">
-                                            <div class="mask full">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="mask half">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="inside-circle">
-                                                ОСТАЛОСЬ
-                                                <span class="inside-circle-precent">25%</span>
+                                <div class="also-indicator">
+                                    <div class="count-indicator">
+                                        <div class="circle-wrap">
+                                            <div class="circle">
+                                                <div class="mask full">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="mask half">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="inside-circle">
+                                                    ОСТАЛОСЬ
+                                                    <span class="inside-circle-precent">25%</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="also-need-help">
-                            <div class="also-left">
-                                <img src="img/child/photo-3.jpg" alt="">
-                                <div class="also-left-wrap">
-                                    <div class="also-title">Худоян Артур</div>
-                                    <div class="also-price">+1 000 ₽ к сумме</div>
+                            <div class="also-need-help">
+                                <div class="also-left">
+                                    <img src="img/child/photo-3.jpg" alt="">
+                                    <div class="also-left-wrap">
+                                        <div class="also-title">Худоян Артур</div>
+                                        <div class="also-price">+1 000 ₽ к сумме</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="also-indicator">
-                                <div class="count-indicator">
-                                    <div class="circle-wrap">
-                                        <div class="circle">
-                                            <div class="mask full">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="mask half">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="inside-circle">
-                                                ОСТАЛОСЬ
-                                                <span class="inside-circle-precent">25%</span>
+                                <div class="also-indicator">
+                                    <div class="count-indicator">
+                                        <div class="circle-wrap">
+                                            <div class="circle">
+                                                <div class="mask full">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="mask half">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="inside-circle">
+                                                    ОСТАЛОСЬ
+                                                    <span class="inside-circle-precent">25%</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="also-need-help">
-                            <div class="also-left">
-                                <img src="img/child/photo-2.jpg" alt="">
-                                <div class="also-left-wrap">
-                                    <div class="also-title">Худоян Артур</div>
-                                    <div class="also-price">+1 000 ₽ к сумме</div>
+                            <div class="also-need-help">
+                                <div class="also-left">
+                                    <img src="img/child/photo-2.jpg" alt="">
+                                    <div class="also-left-wrap">
+                                        <div class="also-title">Худоян Артур</div>
+                                        <div class="also-price">+1 000 ₽ к сумме</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="also-indicator">
-                                <div class="count-indicator">
-                                    <div class="circle-wrap">
-                                        <div class="circle">
-                                            <div class="mask full">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="mask half">
-                                                <div class="fill"></div>
-                                            </div>
-                                            <div class="inside-circle">
-                                                ОСТАЛОСЬ
-                                                <span class="inside-circle-precent">25%</span>
+                                <div class="also-indicator">
+                                    <div class="count-indicator">
+                                        <div class="circle-wrap">
+                                            <div class="circle">
+                                                <div class="mask full">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="mask half">
+                                                    <div class="fill"></div>
+                                                </div>
+                                                <div class="inside-circle">
+                                                    ОСТАЛОСЬ
+                                                    <span class="inside-circle-precent">25%</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <span class="more">
+                            <span class="more">
                             <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>3CD9D385-4517-409E-92D0-E8B0F356FAA9</title>
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -1417,49 +1420,68 @@
                             </svg>
                             Показать еще 3 нуждающихся в помощи
                         </span>
+                        </div>
                     </div>
-                </div>
-                <div class="form-money-group">
-                    <div class="form-money-group-wrap">
-                        <h3 class="form-title required">
-                            Ваше имя, фамилия
-                        </h3>
-                        <input class="input-text" name="name" type="text" required>
+                    <div class="form-money-group justPay">
+                        <div class="form-money-group-wrap">
+                            <h3 class="form-title required">
+                                Ваше имя, фамилия
+                            </h3>
+                            <input class="input-text" type="text">
+                        </div>
+                        <div class="form-money-group-wrap">
+                            <h3 class="form-title required">
+                                Электронная почта
+                            </h3>
+                            <input class="input-text" type="email">
+                        </div>
+                        <div class="form-money-group-wrap">
+                            <h3 class="form-title required">
+                                Ваши комментарии и пожелания
+                            </h3>
+                            <textarea class="input-text" rows="1"></textarea>
+                        </div>
                     </div>
-                    <div class="form-money-group-wrap">
-                        <h3 class="form-title required">
-                            Электронная почта
-                        </h3>
-                        <input class="input-text" name="name" type="email" required>
+                    <label class="checkbox-container justPay">
+                        Остаться анонимом
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <button type="submit" class="btn">Пожертвовать • <span class="donateSum">0</span> ₽</button>
+                    <div class="descr justPay">
+                        <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
+                        <a href="#" class="info-link">условия использования</a>
+                        и даете согласие на обработку
+                        <a href="#" class="info-link">персональных данных</a>.
                     </div>
-                    <div class="form-money-group-wrap">
-                        <h3 class="form-title required">
-                            Ваши комментарии и пожелания
-                        </h3>
-                        <textarea class="input-text" name="name" rows="1" required></textarea>
-                    </div>
-                </div>
-                <label class="checkbox-container">
-                    Остаться анонимом
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                </label>
-                <button type="submit" class="btn">Пожертвовать • <span class="donateSum">0</span> ₽</button>
-                <div class="descr">
-                    * Нажимая на кнопку "Помочь детям", вы принимаете условия использования
-                    и даете согласие на обработку персональных данных.
-                </div>
-            </form>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </form>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
         </div>
     </div>
-</div>
 
+
+    <div id="up" class="up">
+        <svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>51436250-68AA-480C-B88D-6B7D48F8EFD9</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="19.-Completed-projects" transform="translate(-1722.000000, -845.000000)" stroke="#FF5500" stroke-width="2">
+                    <g id="Button---To-top" transform="translate(1700.000000, 820.000000)">
+                        <g id="Icon" transform="translate(22.000000, 25.000000)">
+                            <polyline id="Path-4" points="15 8 8 1 1 8"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/indicator.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/form.js"></script>
 </body>
 </html>

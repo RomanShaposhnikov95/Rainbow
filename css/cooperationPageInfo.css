@@ -1,0 +1,43 @@
+
+.partnerPageInfo {
+    padding: 60px 0 281px 0;
+}
+
+
+.partnerPageInfo .title-xl {
+    text-align: start;
+    padding-bottom: 20px;
+}
+
+
+.list-num li {
+    list-style-type: decimal;
+    margin-top: 50px;
+}
+
+.list-num li {
+    margin-left: 33px;
+}
+
+.list-num li p {
+    position: relative;
+    margin-top: 14px;
+}
+
+.list-num li p:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    background-color: var(--orange);
+    top: 12px;
+    left: -33px;
+}
+
+.list-num li::marker, .list li::marker {
+    font-weight: bold;
+    color: var(--black);
+    left: 0;
+    font-size: 30px;
+    padding-left: 20px;
+}

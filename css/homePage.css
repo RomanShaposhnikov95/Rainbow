@@ -56,9 +56,9 @@ main {
 
 .person-info-content {
     width: 100%;
-    justify-content: space-between;
     display: flex;
     margin-top: 50px;
+    column-gap: 30px;
 }
 
 .person-info-wrap {
@@ -68,7 +68,7 @@ main {
 }
 
 .person-info-block {
-    width: 23.7%;
+    width: calc(25% - 23px);
     display: flex;
     flex-direction: column;
 }
@@ -122,7 +122,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 52px;
+    margin-top: 28px;
 }
 
 .count-indicator {
@@ -174,7 +174,7 @@ main {
     background: var(--orange);
     color: var(--white);
     padding: 18px 0;
-    margin-top: 46px;
+    margin-top: 28px;
     max-height: 60px;
 }
 
@@ -397,6 +397,18 @@ input::-webkit-inner-spin-button {
     width: 100%;
     display: flex;
     justify-content: center;
+    font-size: 16px;
+}
+
+.star-orange {
+    color: var(--orange);
+    margin-right: 5px;
+}
+
+.info-link {
+    border-bottom: 1px solid rgba(67, 6, 117, 0.1);
+    margin: 0 5px;
+    color: var(--lightbrown);
 }
 
 .person-info-wrap-close {
@@ -474,7 +486,7 @@ input::-webkit-inner-spin-button {
 }
 
 .gallery .about-btn {
-   background-color: rgba(246, 238, 237, 0.1);
+    background-color: rgba(246, 238, 237, 0.1);
     color: var(--white);
 }
 

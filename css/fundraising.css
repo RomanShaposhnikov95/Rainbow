@@ -1,0 +1,59 @@
+.fundraising .personPage-gallery {
+    margin-bottom: 28px;
+}
+
+.fundraising .descr {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.fs-17 {
+    font-size: 17px !important;
+    line-height: 28px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.fundraising-wrap {
+    padding: 61px 0 60px 0;
+    border-top: 1px solid #E6DEDD;
+}
+
+.fundraising-wrap .title-l {
+    margin-bottom: 10px;
+}
+
+.list-num {
+    padding-bottom: 10px;
+}
+
+.list-num, .list {
+    margin: 20px 0 0 19px;
+}
+
+.list-num li {
+    list-style-type: decimal;
+    margin-bottom: 10px;
+}
+
+.list-num li p {
+    margin-left: 10px;
+}
+
+
+.list-num li::marker, .list li::marker {
+    font-weight: bold;
+    color: var(--orange);
+    left: 0;
+}
+
+.descr p {
+    margin-top: 20px;
+}
+
+.descr p:first-child {
+    margin-top: 0;
+}
+

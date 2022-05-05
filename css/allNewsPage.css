@@ -1,0 +1,74 @@
+.newsPageMain {
+    padding: 80px 0 211px 0;
+}
+
+.newsPageMain .person-info-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #E6DEDD;
+    margin-top: 0;
+}
+
+.newsPageMain .person-info-block {
+    width: calc(33.3% - 20px);
+}
+
+.pagination {
+    width: 100%;
+    margin-top: 61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.pagination-num {
+    display: flex;
+}
+
+.page-link, .next , .previous  {
+    background-color: transparent;
+    border-radius: 6px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 24px;
+    color: var(--lightbrown);
+}
+
+.next , .previous {
+    width: unset;
+    padding: 13px 24px;
+    border-radius: 6px;
+    background-color: var(--black);
+    color: var(--white);
+    position: absolute;
+    top: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.previous {
+    left: 0;
+}
+
+.page-item.active .page-link {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.page-item.disabled .previous,  .page-item.disabled .next{
+    display: none;
+}

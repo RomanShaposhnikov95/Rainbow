@@ -1,0 +1,39 @@
+
+
+.partnerPage {
+    padding: 0 0 281px 0;
+}
+
+.partnerPage .title-xl {
+    text-align: start;
+    margin-top: 60px;
+}
+
+.partnerPage .title-l {
+    margin: 30px 0 20px 0;
+}
+
+.partners {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 14px;
+    row-gap: 14px;
+    margin-top: 40px;
+}
+
+.partners-item {
+    width: calc(25% - 11px);
+    height: 146px;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 5px 10px 0 rgba(102,61,61,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners-item img {
+    max-width: 100%;
+    object-fit: cover;
+}
