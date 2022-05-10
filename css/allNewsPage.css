@@ -72,3 +72,16 @@
 .page-item.disabled .previous,  .page-item.disabled .next{
     display: none;
 }
+
+
+@media (max-width: 795px) {
+    .newsPageMain .person-info-block {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 534px) {
+    .newsPageMain .person-info-block {
+        width: 100%;
+    }
+}

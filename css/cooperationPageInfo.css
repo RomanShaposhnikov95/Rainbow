@@ -41,3 +41,9 @@
     font-size: 30px;
     padding-left: 20px;
 }
+
+@media (max-width: 534px) {
+    .partnerPageInfo {
+        padding-bottom: 201px;
+    }
+}

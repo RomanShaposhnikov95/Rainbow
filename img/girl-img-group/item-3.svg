@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="139px" height="166px" viewBox="0 0 139 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>738F5139-F763-4CD6-8F1E-F41C9D85CD9F</title>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFB57D" offset="0%"></stop>
+            <stop stop-color="#FF7547" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.-Homepage" transform="translate(-1422.000000, -557.000000)" fill="url(#linearGradient-1)">
+            <g id="Girl" transform="translate(1050.000000, 74.000000)">
+                <g id="Group" transform="translate(19.000000, 65.000000)">
+                    <path d="M455.604111,458.380187 C470.65271,473.684008 488.09314,486.38718 491.381907,502.29115 C494.770333,518.195121 483.807777,537.49994 468.759178,553.303886 C453.810238,569.207857 434.575935,581.710978 413.4481,583.711478 C392.320265,585.711977 369.099579,577.209854 359.532257,561.305884 C349.964936,545.501938 354.05098,522.19612 353.95132,498.890301 C353.85166,475.684507 349.765617,452.278664 359.332938,436.974843 C368.90026,421.671022 392.220606,414.369199 410.059674,419.770548 C427.998402,425.071871 440.655171,443.076366 455.604111,458.380187 Z" id="item-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

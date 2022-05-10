@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>D63A1033-6580-412F-979C-4796E68D7C9F</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#7DBDFD" offset="0%"></stop>
+            <stop stop-color="#417DE6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.-Homepage" transform="translate(-1400.000000, -177.000000)" fill="url(#linearGradient-1)">
+            <g id="Girl" transform="translate(1050.000000, 74.000000)">
+                <g id="Group" transform="translate(19.000000, 65.000000)">
+                    <circle id="item-1" cx="381" cy="88" r="50"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

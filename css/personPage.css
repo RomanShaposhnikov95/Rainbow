@@ -34,6 +34,10 @@
     max-width: 100%;
 }
 
+.nav-tabs {
+    margin-top: 40px;
+}
+
 .nav-tabs .nav-link {
     color: var(--lightbrown);
     font-size: 21px;
@@ -53,6 +57,7 @@
  border-bottom: 4px solid var(--orange);
  font-weight: 600;
  color: var(--black);
+ padding-bottom: 8px;
 }
 
 .personPage-right .money-info {
@@ -286,4 +291,87 @@
 
 .personPage-info-close nav{
     margin-top: 30px;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+
+
+@media (max-width: 930px) {
+    .personPage-info {
+        flex-direction: column;
+    }
+
+    .personPage-left {
+        width: 100%;
+    }
+    .personPage-right {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .personPage-right .input-wrap-container .input-wrap {
+        max-width: unset;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1036px) {
+    .donors-item {
+        width: calc(33.3% - 7px);
+    }
+}
+
+@media (max-width: 795px) {
+    .pdf-item {
+        width: calc(33.3% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .donors-item {
+        width: calc(50% - 5px);
+    }
+}
+
+@media (max-width: 534px) {
+    .pdf-item {
+        width: calc(50% - 15px);
+    }
+
+    .donors-item {
+        width: 100%;
+    }
+
+    .personPageMain {
+        padding: 60px 0 190px 0;
+    }
+
+    .personPage-right .form-wrap {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 386px) {
+    .pdf-item {
+        width: 100%;
+    }
+
+    .nav-tabs .nav-link:nth-child(2n) {
+        margin: 0 12px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 17px;
+    }
+
+    .donors-length {
+        padding: 2px 10px;
+        margin-left: 10px;
+        font-size: 12px;
+
+    }
 }

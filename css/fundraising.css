@@ -1,16 +1,7 @@
 .fundraising .personPage-gallery {
-    margin-bottom: 28px;
+    margin-bottom: 40px;
 }
 
-.fundraising .descr {
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.fs-17 {
-    font-size: 17px !important;
-    line-height: 28px !important;
-}
 
 .mb-60 {
     margin-bottom: 60px;
@@ -42,18 +33,14 @@
     margin-left: 10px;
 }
 
-
 .list-num li::marker, .list li::marker {
     font-weight: bold;
     color: var(--orange);
     left: 0;
 }
 
-.descr p {
+.descr-s p {
     margin-top: 20px;
 }
 
-.descr p:first-child {
-    margin-top: 0;
-}
 

@@ -2,13 +2,13 @@
 // const name = document.getElementById("name");
 // const email = document.getElementById("email");
 // const message = document.getElementById("message");
+// const btn = document.getElementById("btn-submit");
 //
 //
 // form.addEventListener('submit', (e) => {
 //     e.preventDefault();
 //     validateInputs();
-//     // ErrorActive()
-//
+//     ErrorActive()
 // })
 //
 //
@@ -74,8 +74,6 @@ const donateBtn = document.querySelector('.btn-donate')
 const message = modal.querySelector(".title-l");
 const img = modal.querySelector(".modal-img").children[0];
 
-console.log(img)
-
 const form = document.querySelectorAll('.form')
 
 form.forEach(el => {
@@ -102,4 +100,106 @@ donateBtn.addEventListener('click', () => {
     })
 })
 
+
+let data = {}
+
+form.forEach(el => {
+    const name = el.querySelector('[name="name"]'), //получаем поле name
+        otherCount = el.querySelector('[name="other-count"]'), //получаем поле age
+        currency = el.querySelector('[name="currency"]'), //получаем поле plan
+        email = el.querySelector('[name="email"]'), //получаем поле terms
+        comment = el.querySelector('[name="comment"]'), //получаем поле terms
+        check = el.querySelector('[name="check"]'); //получаем поле terms
+
+    if (otherCount) {
+        otherCount.addEventListener('input', () => {
+            const switchCount = el.querySelector('[name="switch-two"]:checked')
+            switchCount.checked = false
+        })
+    }
+
+
+
+    el.addEventListener('submit', (e) => {
+        e.preventDefault();
+            const switchCount = el.querySelector('[name="switch-two"]:checked'), //получаем поле plan;
+            payment = el.querySelector('[name="payment"]:checked'); //получаем поле plan;
+            // let count = Number(switchCount.value) + Number(otherCount.value)
+
+
+        console.log(switchCount)
+        // console.log(count)
+
+
+        //
+        //  data = {
+        //     name: name ? name.value : '',
+        //     otherCount: otherCount ? otherCount.value : '',
+        //     currency: currency? currency.value : '',
+        //     email: email ? email.value : '',
+        //     comment: comment ? comment.value : '',
+        //     check: check ? check.value : false,
+        //     switchCount: switchCount ? switchCount.value : '100',
+        //     payment: payment ? payment.value : '',
+        //     // count: count
+        // };
+        //
+
+        if (name) {
+
+
+            data = {
+                ...data,
+                name: name.value,
+            }
+        }
+        if (otherCount) {
+            data = {
+                ...data,
+                otherCount: otherCount.value,
+            }
+        }
+        if (currency) {
+            data = {
+                ...data,
+                currency: currency.value,
+            }
+        }
+        if (email) {
+            data = {
+                ...data,
+                email: email.value,
+            }
+        }
+        if (comment) {
+            data = {
+                ...data,
+                comment: comment.value,
+            }
+        }
+        if (check) {
+            data = {
+                ...data,
+                check: check.value,
+            }
+        }
+        if (switchCount) {
+            data = {
+                ...data,
+                switchCount: switchCount.value,
+            }
+        }
+
+        if (payment) {
+            data = {
+                ...data,
+                payment: payment.value,
+            }
+        }
+
+        console.log(data);
+
+
+    })
+})
 

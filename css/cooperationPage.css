@@ -37,3 +37,25 @@
     max-width: 100%;
     object-fit: cover;
 }
+
+@media (max-width: 795px) {
+    .partners-item {
+        width: calc(33.4% - 10px);
+    }
+}
+
+@media (max-width: 570px) {
+    .partners-item {
+        width: calc(50% - 7px);
+    }
+
+    .partnerPage {
+        padding-bottom: 220px;
+    }
+}
+
+@media (max-width: 391px) {
+    .partners-item {
+        width: 100%;
+    }
+}

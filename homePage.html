@@ -15,10 +15,12 @@
 </head>
 <body>
 
-    <header id="header">
-        <div class="container-header">
-            <div class="header-top">
-                <a href="homePage.html" class="logo">
+
+<header id="header" class="header-home-page">
+    <div class="container-header">
+        <div class="navbar navbar-expand-custom header">
+            <div class="logo-wrap flex-item">
+                <a class="logo" href="#">
                     <svg width="168px" height="46px" viewBox="0 0 168 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <title>AE00CBCD-DD67-4554-8653-B32795D1C5FB</title>
                         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -43,51 +45,77 @@
                         </g>
                     </svg>
                 </a>
-                <nav class="header-menu">
-                    <ul class="header-menu-ul">
-                        <li class="header-menu-li"><a href="#">О Фонде</a></li>
-                        <li class="header-menu-li"><a href="#">Новости</a></li>
-                        <li class="header-menu-li"><a href="#">Волонтерство</a></li>
-                        <li class="header-menu-li"><a href="#">Контакты</a></li>
-                        <li class="header-menu-li"><a href="#">Получить помощь</a></li>
-                        <li class="header-menu-li"><a href="#">Кому помогли</a></li>
-                    </ul>
-                </nav>
-                <div class="header-btns">
+                <ul class="header-languages hide-el">
+                    <li><a class="lang active-lang" href="/lv">RU</a></li>
+                    <li><a class="lang" href="/en">EN</a></li>
+                    <li><a class="lang" href="/ru">GR</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-header-group flex-item">
+                <div class="header-btns hide-el">
+                    <button class="btn btn-programs">Программы</button>
+                    <button class="btn btn-donate" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Пожертвовать</button>
+                </div>
+
+                <div class="menu-btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                    <div class="menu-btn__burger"></div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse flex-item" id="navbarNavDropdown">
+                <ul class="header-languages show-el">
+                    <li><a class="lang active-lang" href="/lv">RU</a></li>
+                    <li><a class="lang" href="/en">EN</a></li>
+                    <li><a class="lang" href="/ru">GR</a></li>
+                </ul>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">О Фонде</a></li>
+                    <li class="menu-item"><a href="#">Новости</a></li>
+                    <li class="menu-item"><a href="#">Волонтерство</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
+                    <li class="menu-item"><a href="">Получить помощь</a></li>
+                    <li class="menu-item"><a href="#">Получить помощь</a></li>
+                </ul>
+                <div class="header-btns show-el">
                     <button class="btn btn-programs">Программы</button>
                     <button class="btn btn-donate" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Пожертвовать</button>
                 </div>
             </div>
-            <ul class="header-languages">
-                <li><a class="lang active-lang" href="/lv">RU</a></li>
-                <li><a class="lang" href="/en">EN</a></li>
-                <li><a class="lang" href="/ru">GR</a></li>
-            </ul>
-<!--            <div class="header-languages">-->
-<!--                <div class="lang active-lang">RU</div>-->
-<!--                <div class="lang">EN</div>-->
-<!--                <div class="lang">GR</div>-->
-<!--            </div>-->
         </div>
-    </header>
+    </div>
+</header>
+
 
     <div class="subheader-block">
         <div class="container">
             <div class="about-block">
                 <h3 class="about-title-m">Благотворительный Фонд</h3>
-                <h2 class="about-title-l">«Rainbow in Cyprus»</h2>
+                <h2 class="about-title-l"><span class="marks">«</span>Rainbow in Cyprus <span class="marks">»</span></h2>
                 <p class="descr about-descr">
-                    Lorem Ipsum - это текст-"рыба", часто используемый
-                    в печати и вэб-дизайне. Lorem Ipsum является стандартной
-                    "рыбой" для текстов на латинице с начала XVI века.
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
+                    Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
                 </p>
                 <div class="about-bottom-btns">
                     <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
                     <button class="btn about-btn">О нашем фонде </button>
                 </div>
             </div>
+
+                <div class="about-block-right">
+                    <div class="girl-border">
+                        <div class="girl-img">
+                            <img class="girl" src="img/girl-img-group/girl.svg" alt="">
+                            <img class="item-1 circle-item" src="img/girl-img-group/item-1.svg" alt="">
+                            <img class="item-2 circle-item" src="img/girl-img-group/item-2.svg" alt="">
+                            <img class="item-3 circle-item" src="img/girl-img-group/item-3.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
         </div>
     </div>
+
 
     <main>
         <div class="container person-info-wrap">
@@ -158,7 +186,10 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    <div class="btns-wrap">
+                        <a href="#" class="btn history-link">История</a>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    </div>
                 </div>
                 <div class="person-info-block">
                     <img src="img/child/photo-2.jpg" alt="">
@@ -223,7 +254,10 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    <div class="btns-wrap">
+                        <a href="#" class="btn history-link">История</a>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    </div>
                 </div>
                 <div class="person-info-block">
                     <img src="img/child/photo-3.jpg" alt="">
@@ -288,7 +322,10 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    <div class="btns-wrap">
+                        <a href="#" class="btn history-link">История</a>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    </div>
                 </div>
                 <div class="person-info-block">
                     <img src="img/child/photo-4.jpg" alt="">
@@ -353,92 +390,97 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    <div class="btns-wrap">
+                        <a href="#" class="btn history-link">История</a>
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Хочу помочь</button>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-l form-wrap">
-            <div class="title-l">Нецелевое пожертвование</div>
-            <div class="descr">
-                Нецелевое пожертвование давно выяснено, что при
-                оценке дизайна и композиции читаемый текст мешает
-                сосредоточиться. Lorem Ipsum используют потому,
-            </div>
-            <form id="form" class="form">
-                <div class="form-top form-container">
-                    <div class="form-money-group">
-                        <h3 class="form-title required">
-                            Выберите сумму пожертвования
-                        </h3>
-                        <div class="switch-field switch-field-count">
-                            <input class="switch-count" type="radio" id="radio-one-hundred" name="switch-two" value="100" />
-                            <label for="radio-one-hundred">100 <span class="currency">₽</span></label>
-                            <input class="switch-count" type="radio" id="radio-three-hundred" name="switch-two" value="300" />
-                            <label for="radio-three-hundred">300 <span class="currency">₽</span></label>
-                            <input class="switch-count" type="radio" id="radio-five-hundred" name="switch-two" value="500" />
-                            <label for="radio-five-hundred">500 <span class="currency">₽</span></label>
-                            <input class="switch-count" type="radio" id="radio-one-thousand" name="switch-two" value="1000" />
-                            <label for="radio-one-thousand">1000 <span class="currency">₽</span></label>
-                            <input class="switch-count" type="radio" id="radio-two-thousand-five-hundred" name="switch-two" value="2500" />
-                            <label for="radio-two-thousand-five-hundred">2 500 <span class="currency">₽</span></label>
-                            <input class="switch-count" type="radio" id="radio-five-thousand" name="switch-two" value="5000" />
-                            <label for="radio-five-thousand">5000 <span class="currency">₽</span></label>
-                        </div>
-                    </div>
-                    <div class="form-money-group">
-                        <h3 class="form-title">
-                            Другая сумма
-                        </h3>
-                        <div class="input-wrap">
-                            <input class="input-number" min="1" type="number">
-                            <select id="cars">
-                                <option value="RUB">₽ (RUB)</option>
-                                <option value="saab">€ (EUR)</option>
-                                <option value="opel">$ (USD)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-money-group">
-                        <div class="form-money-group-wrap">
-                            <h3 class="form-title required">
-                                Ваше имя, фамилия
-                            </h3>
-                            <input id="name" class="input-text" name="name" type="text" >
-                        </div>
-                        <div class="form-money-group-wrap">
-                            <h3 class="form-title required">
-                                Электронная почта
-                            </h3>
-                            <input id="email" class="input-text" name="name" type="email" >
-                        </div>
-                        <div class="form-money-group-wrap">
-                            <h3 class="form-title required">
-                                Ваши комментарии и пожелания
-                            </h3>
-                            <textarea id="message" class="input-text" name="name" rows="1" ></textarea>
-                        </div>
-                    </div>
-                    <label class="checkbox-container">
-                        Остаться анонимом
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-submit">Помочь детям • <span class="donateSum">0</span> ₽</button>
-<!--                    <button type="submit" class="btn btn-submit">Помочь детям • <span class="donateSum">0</span> ₽</button>-->
-
-                    <div class="descr">
-                        <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
-                        <a href="#" class="info-link">условия использования</a>
-                        и даете согласие на обработку
-                        <a href="#" class="info-link">персональных данных</a>.
-                    </div>
+        <div class="container-l form-wrap normal-form">
+                <div class="title-l">Нецелевое пожертвование</div>
+                <div class="descr">
+                    Нецелевое пожертвование давно выяснено, что при
+                    оценке дизайна и композиции читаемый текст мешает
+                    сосредоточиться. Lorem Ipsum используют потому,
                 </div>
-            </form>
-        </div>
+                <form id="form" class="form">
+                    <div class="form-top form-container">
+                        <div class="form-money-group">
+                            <h3 class="form-title required">
+                                Выберите сумму пожертвования
+                            </h3>
+                            <div class="switch-field switch-field-count">
+                                <input class="switch-count" type="radio" id="radio-one-hundred" name="switch-two" value="100" />
+                                <label for="radio-one-hundred">100 <span class="currency">₽</span></label>
+                                <input class="switch-count" type="radio" id="radio-three-hundred" name="switch-two" value="300" />
+                                <label for="radio-three-hundred">300 <span class="currency">₽</span></label>
+                                <input class="switch-count" type="radio" id="radio-five-hundred" name="switch-two" value="500" />
+                                <label for="radio-five-hundred">500 <span class="currency">₽</span></label>
+                                <input class="switch-count" type="radio" id="radio-one-thousand" name="switch-two" value="1000" />
+                                <label for="radio-one-thousand">1000 <span class="currency">₽</span></label>
+                                <input class="switch-count" type="radio" id="radio-two-thousand-five-hundred" name="switch-two" value="2500" />
+                                <label for="radio-two-thousand-five-hundred">2 500 <span class="currency">₽</span></label>
+                                <input class="switch-count" type="radio" id="radio-five-thousand" name="switch-two" value="5000" />
+                                <label for="radio-five-thousand">5000 <span class="currency">₽</span></label>
+                            </div>
+                        </div>
+                        <div class="form-money-group">
+                            <h3 class="form-title">
+                                Другая сумма
+                            </h3>
+                            <div class="input-wrap">
+                                <input class="input-number" name="other-count" min="1" type="number">
+                                <select id="cars" name="currency">
+                                    <option value="RUB">₽ (RUB)</option>
+                                    <option value="saab">€ (EUR)</option>
+                                    <option value="opel">$ (USD)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-money-group">
+                            <div class="form-money-group-wrap">
+                                <h3 class="form-title required">
+                                    Ваше имя, фамилия
+                                </h3>
+                                <input id="name" class="input-text" name="name" type="text" >
+                            </div>
+                            <div class="form-money-group-wrap">
+                                <h3 class="form-title required">
+                                    Электронная почта
+                                </h3>
+                                <input id="email" class="input-text" name="email" type="email">
+                            </div>
+                            <div class="form-money-group-wrap">
+                                <h3 class="form-title required">
+                                    Ваши комментарии и пожелания
+                                </h3>
+                                <textarea id="message" class="input-text" name="comment" rows="1" ></textarea>
+                            </div>
+                        </div>
+                        <label class="checkbox-container">
+                            Остаться анонимом
+                            <input type="checkbox" name="check">
+                            <span class="checkmark"></span>
+                        </label>
+<!--                        <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-submit">Помочь детям • <span class="donateSum">0</span> ₽</button>-->
+                                            <button type="submit" class="btn btn-submit">Помочь детям • <span class="donateSum">0</span> ₽</button>
+
+                        <div class="descr">
+                            <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
+                            <a href="#" class="info-link">условия использования</a>
+                            и даете согласие на обработку
+                            <a href="#" class="info-link">персональных данных</a>.
+                        </div>
+                    </div>
+                </form>
+            </div>
     </main>
 
-    <div class="container person-info-wrap person-info-wrap-close">
+
+    <div class="person-info-wrap person-info-wrap-close">
+    <div class="container">
         <h2 class="title-xl">Мы уже помогли более 100 детям</h2>
         <a href="#" class="title-s link">Смотреть всех</a>
 
@@ -485,6 +527,8 @@
                     <a href="#" class="title-s link">История</a>
                 </div>
 
+                <a href="#" class="btn history-link">История</a>
+
             </div>
             <div class="person-info-block">
                 <img src="img/child/photo-6.jpg" alt="">
@@ -527,6 +571,9 @@
                 <div class="title-m-wrap-12">
                     <a href="#" class="title-s link">История</a>
                 </div>
+
+                <a href="#" class="btn history-link">История</a>
+
             </div>
             <div class="person-info-block">
                 <img src="img/child/photo-7.jpg" alt="">
@@ -569,6 +616,8 @@
                 <div class="title-m-wrap-12">
                     <a href="#" class="title-s link">История</a>
                 </div>
+
+                <a href="#" class="btn history-link">История</a>
             </div>
             <div class="person-info-block">
                 <img src="img/child/photo-8.jpg" alt="">
@@ -611,15 +660,18 @@
                 <div class="title-m-wrap-12">
                     <a href="#" class="title-s link">История</a>
                 </div>
+
+                <a href="#" class="btn history-link">История</a>
             </div>
         </div>
     </div>
+</div>
 
     <div class="gallery">
         <div class="container">
             <div class="about-block">
                 <h3 class="about-title-m">Благотворительный Фонд</h3>
-                <h2 class="about-title-l">«Rainbow in Cyprus»</h2>
+                <h2 class="about-title-l"><span class="marks">«</span>Rainbow in Cyprus<span class="marks">»</span></h2>
                 <p class="descr about-descr">
                     Lorem Ipsum - это текст-"рыба", часто используемый
                     в печати и вэб-дизайне. Lorem Ipsum является стандартной
@@ -639,8 +691,8 @@
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
@@ -712,36 +764,69 @@
 
     <div class="contact">
         <div class="container-l form-wrap contact-container">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13100.822986799567!2d32.39223328496782!3d34.82591915091757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sChrysoneras%20Avenue%2066.%20Shop%20K1%2C%20Kissonerga%208574!5e0!3m2!1sru!2slv!4v1650998240422!5m2!1sru!2slv" width="100%" height="510px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13100.822986799567!2d32.39223328496782!3d34.82591915091757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sChrysoneras%20Avenue%2066.%20Shop%20K1%2C%20Kissonerga%208574!5e0!3m2!1sru!2slv!4v1650998240422!5m2!1sru!2slv" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-info">
+            <div class="title-xs">Контакты</div>
+            <div class="descr">
+                Есть много вариантов Lorem Ipsum, но большинство
+                из них имеет не всегда приемлемые модификации,
+                например, юмористические вставки или слова, которые.
             </div>
-            <div class="contact-info">
-                <div class="title-xs">Контакты</div>
-                <div class="descr">
-                    Есть много вариантов Lorem Ipsum, но большинство
-                    из них имеет не всегда приемлемые модификации,
-                    например, юмористические вставки или слова, которые.
-                </div>
-                <div class="link-wrap">
-                    <a href="#" class="title-s link">Задать вопрос</a>
-                </div>
+            <div class="link-wrap">
+                <a href="#" class="title-s link">Задать вопрос</a>
+            </div>
 
-                <div class="contact-info-content">
-                    <div class="contact-info-block">
-                        <div class="icon">
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>8C2E38AD-4E90-4701-8933-CA61B375DFA2</title>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                    <g id="01.-Homepage" transform="translate(-873.000000, -5038.000000)" stroke="#665A52" stroke-width="2">
-                                        <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
-                                            <g id="Contacts" transform="translate(245.000000, 867.000000)">
-                                                <g id="Content" transform="translate(70.000000, 70.000000)">
-                                                    <g transform="translate(540.000000, 20.000000)" id="Blocks">
-                                                        <g transform="translate(0.000000, 200.000000)">
+            <div class="contact-info-content">
+                <div class="contact-info-block">
+                    <div class="icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>8C2E38AD-4E90-4701-8933-CA61B375DFA2</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="01.-Homepage" transform="translate(-873.000000, -5038.000000)" stroke="#665A52" stroke-width="2">
+                                    <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
+                                        <g id="Contacts" transform="translate(245.000000, 867.000000)">
+                                            <g id="Content" transform="translate(70.000000, 70.000000)">
+                                                <g transform="translate(540.000000, 20.000000)" id="Blocks">
+                                                    <g transform="translate(0.000000, 200.000000)">
+                                                        <g id="icon" transform="translate(18.000000, 18.000000)">
+                                                            <g transform="translate(1.000000, 1.000000)">
+                                                                <circle id="Oval" cx="11" cy="11" r="11"></circle>
+                                                                <polyline id="Path" points="11 5 11 11 15 13"></polyline>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="contact-info-info">
+                        <div class="contact-info-title">Рабочее время</div>
+                        <div class="contact-info-data">10.00 - 19.00</div>
+                    </div>
+                </div>
+                <div class="contact-info-block">
+                    <div class="icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>7016E2AE-F622-46FE-B0E2-E019AF584F39</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="01.-Homepage" transform="translate(-873.000000, -5108.000000)" stroke="#665A52" stroke-width="2">
+                                    <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
+                                        <g id="Contacts" transform="translate(245.000000, 867.000000)">
+                                            <g id="Content" transform="translate(70.000000, 70.000000)">
+                                                <g transform="translate(540.000000, 20.000000)" id="Blocks">
+                                                    <g transform="translate(0.000000, 200.000000)">
+                                                        <g id="Block-2" transform="translate(0.000000, 70.000000)">
                                                             <g id="icon" transform="translate(18.000000, 18.000000)">
                                                                 <g transform="translate(1.000000, 1.000000)">
-                                                                    <circle id="Oval" cx="11" cy="11" r="11"></circle>
-                                                                    <polyline id="Path" points="11 5 11 11 15 13"></polyline>
+                                                                    <path d="M14.00742,4.01373743 C16.0161107,4.40489286 17.5866716,5.97245186 17.9785761,7.97730315" id="Path"></path>
+                                                                    <path d="M14.00742,-4.54747351e-13 C18.2093539,0.465908862 21.5279105,3.77395619 22,7.96726881" id="Path"></path>
+                                                                    <path d="M19.994644,16.974675 L19.994644,19.9849781 C19.9969421,20.5500572 19.7604443,21.0899182 19.3432516,21.4719322 C18.926059,21.8539462 18.3668359,22.042709 17.802968,21.9918468 C14.7093207,21.6563392 11.7376546,20.6012318 9.12674597,18.9113033 C6.69763315,17.3706943 4.63816951,15.315167 3.09461014,12.8906971 C1.39553649,10.2729416 0.338168371,7.2925314 0.00816730854,4.19092126 C-0.0426301012,3.62987335 0.145169186,3.07334868 0.525690159,2.65729331 C0.906211133,2.24123795 1.44441306,2.00396486 2.00882569,2.0033357 L5.02489361,2.0033357 C6.03413433,1.99352027 6.89435389,2.73189507 7.03560555,3.72934146 C7.16290676,4.69270512 7.39899092,5.63860299 7.73935473,6.548992 C8.01556121,7.28237712 7.83890013,8.10913803 7.28694454,8.6662385 L6.01014246,9.94060014 C7.44132245,12.452744 9.52532354,14.5327618 12.0422783,15.9612063 L13.3190804,14.6868447 C13.8772477,14.1359441 14.7055919,13.9596206 15.4403815,14.2352992 C16.3525139,14.5750124 17.3002232,14.8106454 18.2654318,14.9377032 C19.2763802,15.0800508 20.019969,15.955981 19.994644,16.974675 L19.994644,16.974675 Z" id="Path"></path>
                                                                 </g>
                                                             </g>
                                                         </g>
@@ -751,64 +836,30 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="contact-info-info">
-                            <div class="contact-info-title">Рабочее время</div>
-                            <div class="contact-info-data">10.00 - 19.00</div>
-                        </div>
+                            </g>
+                        </svg>
                     </div>
-                    <div class="contact-info-block">
-                        <div class="icon">
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>7016E2AE-F622-46FE-B0E2-E019AF584F39</title>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                    <g id="01.-Homepage" transform="translate(-873.000000, -5108.000000)" stroke="#665A52" stroke-width="2">
-                                        <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
-                                            <g id="Contacts" transform="translate(245.000000, 867.000000)">
-                                                <g id="Content" transform="translate(70.000000, 70.000000)">
-                                                    <g transform="translate(540.000000, 20.000000)" id="Blocks">
-                                                        <g transform="translate(0.000000, 200.000000)">
-                                                            <g id="Block-2" transform="translate(0.000000, 70.000000)">
-                                                                <g id="icon" transform="translate(18.000000, 18.000000)">
-                                                                    <g transform="translate(1.000000, 1.000000)">
-                                                                        <path d="M14.00742,4.01373743 C16.0161107,4.40489286 17.5866716,5.97245186 17.9785761,7.97730315" id="Path"></path>
-                                                                        <path d="M14.00742,-4.54747351e-13 C18.2093539,0.465908862 21.5279105,3.77395619 22,7.96726881" id="Path"></path>
-                                                                        <path d="M19.994644,16.974675 L19.994644,19.9849781 C19.9969421,20.5500572 19.7604443,21.0899182 19.3432516,21.4719322 C18.926059,21.8539462 18.3668359,22.042709 17.802968,21.9918468 C14.7093207,21.6563392 11.7376546,20.6012318 9.12674597,18.9113033 C6.69763315,17.3706943 4.63816951,15.315167 3.09461014,12.8906971 C1.39553649,10.2729416 0.338168371,7.2925314 0.00816730854,4.19092126 C-0.0426301012,3.62987335 0.145169186,3.07334868 0.525690159,2.65729331 C0.906211133,2.24123795 1.44441306,2.00396486 2.00882569,2.0033357 L5.02489361,2.0033357 C6.03413433,1.99352027 6.89435389,2.73189507 7.03560555,3.72934146 C7.16290676,4.69270512 7.39899092,5.63860299 7.73935473,6.548992 C8.01556121,7.28237712 7.83890013,8.10913803 7.28694454,8.6662385 L6.01014246,9.94060014 C7.44132245,12.452744 9.52532354,14.5327618 12.0422783,15.9612063 L13.3190804,14.6868447 C13.8772477,14.1359441 14.7055919,13.9596206 15.4403815,14.2352992 C16.3525139,14.5750124 17.3002232,14.8106454 18.2654318,14.9377032 C19.2763802,15.0800508 20.019969,15.955981 19.994644,16.974675 L19.994644,16.974675 Z" id="Path"></path>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </g>
-                                                    </g>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="contact-info-info">
-                            <div class="contact-info-title">Номер телефона</div>
-                            <a href="tel:+357 96564044" class="contact-info-data">+357 96564044</a>
-                        </div>
+                    <div class="contact-info-info">
+                        <div class="contact-info-title">Номер телефона</div>
+                        <a href="tel:+357 96564044" class="contact-info-data">+357 96564044</a>
                     </div>
-                    <div class="contact-info-block">
-                        <div class="icon">
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>B5120C13-59A3-46C7-9CAA-04964BD1BA8F</title>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                    <g id="01.-Homepage" transform="translate(-873.000000, -5178.000000)" stroke="#665A52" stroke-width="2">
-                                        <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
-                                            <g id="Contacts" transform="translate(245.000000, 867.000000)">
-                                                <g id="Content" transform="translate(70.000000, 70.000000)">
-                                                    <g transform="translate(540.000000, 20.000000)" id="Blocks">
-                                                        <g transform="translate(0.000000, 200.000000)">
-                                                            <g id="Block-3" transform="translate(0.000000, 140.000000)">
-                                                                <g id="icon" transform="translate(18.000000, 18.000000)">
-                                                                    <g transform="translate(2.000000, 2.000000)">
-                                                                        <circle id="Oval" cx="10.0005924" cy="10.0003511" r="4"></circle>
-                                                                        <path d="M14.0005924,6.00035105 L14.0005924,11.0003511 C14.0005924,12.6572053 15.3437381,14.0003511 17.0005924,14.0003511 C18.6574466,14.0003511 20.0005924,12.6572053 20.0005924,11.0003511 L20.0005924,10.0003511 C20.0002997,5.35325563 16.7987268,1.31876537 12.2732309,0.262648575 C7.74773497,-0.793468222 3.09107395,1.40714283 1.0338483,5.57407438 C-1.02337736,9.74100594 0.0610430124,14.7760048 3.65122057,17.7266185 C7.24139812,20.6772321 12.3910912,20.7657851 16.0805924,17.9403511" id="Path"></path>
-                                                                    </g>
+                </div>
+                <div class="contact-info-block">
+                    <div class="icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>B5120C13-59A3-46C7-9CAA-04964BD1BA8F</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="01.-Homepage" transform="translate(-873.000000, -5178.000000)" stroke="#665A52" stroke-width="2">
+                                    <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
+                                        <g id="Contacts" transform="translate(245.000000, 867.000000)">
+                                            <g id="Content" transform="translate(70.000000, 70.000000)">
+                                                <g transform="translate(540.000000, 20.000000)" id="Blocks">
+                                                    <g transform="translate(0.000000, 200.000000)">
+                                                        <g id="Block-3" transform="translate(0.000000, 140.000000)">
+                                                            <g id="icon" transform="translate(18.000000, 18.000000)">
+                                                                <g transform="translate(2.000000, 2.000000)">
+                                                                    <circle id="Oval" cx="10.0005924" cy="10.0003511" r="4"></circle>
+                                                                    <path d="M14.0005924,6.00035105 L14.0005924,11.0003511 C14.0005924,12.6572053 15.3437381,14.0003511 17.0005924,14.0003511 C18.6574466,14.0003511 20.0005924,12.6572053 20.0005924,11.0003511 L20.0005924,10.0003511 C20.0002997,5.35325563 16.7987268,1.31876537 12.2732309,0.262648575 C7.74773497,-0.793468222 3.09107395,1.40714283 1.0338483,5.57407438 C-1.02337736,9.74100594 0.0610430124,14.7760048 3.65122057,17.7266185 C7.24139812,20.6772321 12.3910912,20.7657851 16.0805924,17.9403511" id="Path"></path>
                                                                 </g>
                                                             </g>
                                                         </g>
@@ -818,30 +869,30 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="contact-info-info">
-                            <div class="contact-info-title">Электронная почта </div>
-                            <a href="mailto:info@rainbowcy.org" class="contact-info-data">info@rainbowcy.org</a>
-                        </div>
+                            </g>
+                        </svg>
                     </div>
-                    <div class="contact-info-block">
-                        <div class="icon">
-                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>ECD3D203-AF6B-4000-82AC-4A4C3C32CDF2</title>
-                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-                                    <g id="01.-Homepage" transform="translate(-873.000000, -5248.000000)" stroke="#665A52" stroke-width="2">
-                                        <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
-                                            <g id="Contacts" transform="translate(245.000000, 867.000000)">
-                                                <g id="Content" transform="translate(70.000000, 70.000000)">
-                                                    <g transform="translate(540.000000, 20.000000)" id="Blocks">
-                                                        <g transform="translate(0.000000, 200.000000)">
-                                                            <g id="Block-4" transform="translate(0.000000, 210.000000)">
-                                                                <g id="icon" transform="translate(18.000000, 18.000000)">
-                                                                    <g transform="translate(3.000000, 1.000000)">
-                                                                        <path d="M18,9 C18,16 9,22 9,22 C9,22 0,16 0,9 C0,4.02943717 4.0294373,0 9,0 C13.9705627,0 18,4.02943717 18,9 L18,9 Z" id="Path"></path>
-                                                                        <circle id="Oval" cx="9" cy="8.99999987" r="3"></circle>
-                                                                    </g>
+                    <div class="contact-info-info">
+                        <div class="contact-info-title">Электронная почта </div>
+                        <a href="mailto:info@rainbowcy.org" class="contact-info-data">info@rainbowcy.org</a>
+                    </div>
+                </div>
+                <div class="contact-info-block">
+                    <div class="icon">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>ECD3D203-AF6B-4000-82AC-4A4C3C32CDF2</title>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                                <g id="01.-Homepage" transform="translate(-873.000000, -5248.000000)" stroke="#665A52" stroke-width="2">
+                                    <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
+                                        <g id="Contacts" transform="translate(245.000000, 867.000000)">
+                                            <g id="Content" transform="translate(70.000000, 70.000000)">
+                                                <g transform="translate(540.000000, 20.000000)" id="Blocks">
+                                                    <g transform="translate(0.000000, 200.000000)">
+                                                        <g id="Block-4" transform="translate(0.000000, 210.000000)">
+                                                            <g id="icon" transform="translate(18.000000, 18.000000)">
+                                                                <g transform="translate(3.000000, 1.000000)">
+                                                                    <path d="M18,9 C18,16 9,22 9,22 C9,22 0,16 0,9 C0,4.02943717 4.0294373,0 9,0 C13.9705627,0 18,4.02943717 18,9 L18,9 Z" id="Path"></path>
+                                                                    <circle id="Oval" cx="9" cy="8.99999987" r="3"></circle>
                                                                 </g>
                                                             </g>
                                                         </g>
@@ -851,16 +902,17 @@
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
-                        <div class="contact-info-info">
-                            <div class="contact-info-title">Адрес нашего офиса</div>
-                            <div class="contact-info-data">Chrysoneras Avenue 66. Shop K1, Kissonerga 8574</div>
-                        </div>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="contact-info-info">
+                        <div class="contact-info-title">Адрес нашего офиса</div>
+                        <div class="contact-info-data">Chrysoneras Avenue 66. Shop K1, Kissonerga 8574</div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <footer>
@@ -1147,8 +1199,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
