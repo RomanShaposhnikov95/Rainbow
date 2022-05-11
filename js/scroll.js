@@ -1,4 +1,8 @@
-let mybutton = document.getElementById("up");
+const mybutton = document.getElementById("up");
+const header = document.getElementById("header")
+const logoWrap = document.querySelector('.logo-wrap')
+const hl = document.querySelector('.header-languages')
+const menu = document.querySelector('.menu')
 
 
 window.onscroll = function () {
@@ -14,32 +18,29 @@ function scrollFunction() {
     }
 }
 
+ document.documentElement.scrollTop;
+
 
 
 function scrollFunctionHeader() {
-    if (document.body.scrollTop > 1|| document.documentElement.scrollTop > 1) {
-        document.getElementById("header").style.boxShadow = "0 5px 10px 0 rgba(68,61,102,0.05)";
-        document.getElementById("header").style.zIndex = "1002";
-        document.getElementById("header").style.transition = "ease 0.3s";
+    if (document.documentElement.scrollTop >= 10) {
+        console.log(document.documentElement.scrollTop)
+        header.style.cssText = 'box-shadow: 0 5px 10px 0 rgba(68,61,102,0.05); z-index: 1002; transition: all 0.2s';
         if (window.innerWidth > 1450) {
-            document.getElementById("header").style.padding = "16px 0 20px 0";
-            document.querySelector('.logo-wrap').style.flexDirection = 'row'
-            document.querySelector('.header-languages').style.margin = '0 0 0 31px'
-            document.querySelector('.logo-wrap').style.alignItems = 'center'
-            document.querySelector('.menu').style.marginLeft = '-83px'
+            header.style.padding = "16px 0 20px 0";
+            logoWrap.style.flexDirection = 'row'
+            logoWrap.style.alignItems = 'center'
+            hl.style.margin = '0 0 0 31px'
+            menu.style.marginLeft = '-83px'
         }
-
-
     } else {
-        document.getElementById("header").style.boxShadow = "unset";
-        document.getElementById("header").style.zIndex = "1000";
-        document.getElementById("header").style.transition = "all 0.1s";
+        header.style.cssText ='box-shadow: unset; z-index: 1000; transition: 0.1s';
         if (window.innerWidth > 1450) {
-            document.getElementById("header").style.padding = "26px 0 0 0";
-            document.querySelector('.logo-wrap').style.flexDirection = 'column'
-            document.querySelector('.header-languages').style.margin = '24px 0 0 73px'
-            document.querySelector('.logo-wrap').style.alignItems = 'flex-start'
-            document.querySelector('.menu').style.marginLeft = '24px'
+            header.style.padding = "26px 0 0 0";
+            logoWrap.style.flexDirection = 'column'
+            logoWrap.style.alignItems = 'flex-start'
+            hl.style.margin = '24px 0 0 73px'
+            menu.style.marginLeft = '24px'
         }
 
     }
@@ -70,7 +71,6 @@ menuBtn.addEventListener('click', () => {
         }
     }
 });
-
 
 
 const next = document.querySelector('.next')

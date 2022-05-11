@@ -2,7 +2,7 @@ body,html {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Sans', sans-serif;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
 }
 
 body {
@@ -31,29 +31,22 @@ html * {
 .container-header {
     width: 100%;
     max-width: 1740px;
-    /*width: 96.7%;*/
 }
 
 .container-l {
     width: 100%;
-    /*max-width: 1310px;*/
-    /*width: 72.7%;*/
 
     max-width: 1310px;
-    /*padding: 0 20px;*/
 }
 
 .container-m {
     width: 100%;
     max-width: 1197px;
-    /*width: 66.5%;*/
     padding: 0;
 }
 
 .container {
-    /*width: 65%;*/
     width: 100%;
-    /*max-width: 1170px;*/
     max-width: 1210px;
     padding: 0 20px;
 }
@@ -67,9 +60,7 @@ html * {
 }
 
 .container-s {
-    /*width: 54%;*/
     width: 100%;
-    /*max-width: 970px;*/
     max-width: 1010px;
     padding: 0 20px;
 }
@@ -288,7 +279,6 @@ header {
     left: 0;
 }
 
-
 /*------------------------------------------------------------------------*/
 
 .descr {
@@ -368,10 +358,7 @@ header {
     right: -15px;
 }
 
-
-
 /*footer------------------------------------------------------------*/
-
 
 footer {
     background-color: var(--brown);
@@ -388,7 +375,6 @@ footer .form-wrap {
     display: flex;
     justify-content: space-between;
 }
-
 
 footer .container {
     width: 100%;
@@ -526,7 +512,6 @@ footer:before {
     z-index: 1;
 }
 
-
 .year, .dew {
     color: var(--white);
     font-size: 15px;
@@ -577,8 +562,6 @@ footer:before {
     justify-content: center;
 }
 
-
-/* 3rd progress bar */
 .count-indicator .mask .fill {
     clip: rect(0px, 21px, 42px, 0px);
     background-color: #CC2952;
@@ -695,6 +678,10 @@ footer:before {
     cursor: pointer;
 }
 
+.also-need-help:hover {
+    background-color: #EBE3E2;
+}
+
 .also-need-help:first-child {
     margin-top: 0;
 }
@@ -777,8 +764,6 @@ footer:before {
     height: 46px;
 }
 
-
-/* 3rd progress bar */
 .also-indicator .count-indicator .mask .fill {
     clip: rect(0px, 25px, 50px, 0px);
 }
@@ -864,7 +849,6 @@ footer:before {
     top: 30px;
 }
 
-
 .mathematics-btn {
     height: 50px;
     width: 50px;
@@ -876,7 +860,6 @@ footer:before {
 .mathematics-btn:last-child {
     background-color: var(--lightbrown);
 }
-
 
 /*custom-js-class------------------------------------------------------------*/
 
@@ -892,7 +875,6 @@ footer:before {
     position: relative;
     padding-bottom: 20px;
 }
-
 
 .breadcrumb-item a {
     color: var(--lightbrown);
@@ -948,7 +930,6 @@ footer:before {
     left: 50%;
     right: 0;
     z-index: 1001;
-    /*background-color: #CC2952;*/
 }
 
 .bread-border:after {
@@ -959,9 +940,7 @@ footer:before {
     left: 0;
     right: 0;
     z-index: 1001;
-    /*background-color: #CC2952;*/
 }
-
 
 .page-general-img {
     width: 100%;
@@ -997,13 +976,8 @@ footer:before {
 }
 
 
-.justPay {
-    width: 100% !important;
-    /*display: none !important;*/
-}
-
-.error {
-    border: 1px solid red !important;
+.justPay-show {
+    display: none !important;
 }
 
 .show-el {
@@ -1048,8 +1022,6 @@ footer:before {
         display: none;
     }
 }
-
-
 
 @media (max-width: 1449px) {
     body {

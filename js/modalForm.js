@@ -1,12 +1,10 @@
 let data = {};
 let recipient = null;
-const formPage = document.querySelector('.normal-form');
 const formModal = document.querySelector('.modal-form');
 const modalBtnSum = formModal.querySelector('.donateSumModal')
 
 let count = 0
 let plusOneTh = 0
-let switchCount = 0
 
 const exampleModal = document.getElementById('exampleModal');
 exampleModal.addEventListener('show.bs.modal',  (event) => {
@@ -27,50 +25,8 @@ exampleModal.addEventListener('show.bs.modal',  (event) => {
         })
     }
 
-    if (recipient === '@fat') {
-        img.src = 'img/ic-payment-options.svg';
-        message.innerHTML = 'Выберите способ оплаты';
-        modalBody.forEach(el => {
-            el.classList.add('justPay-show')
-        })
-
-    }
 })
 
-const otherCount = formPage.querySelector('[name="other-count"]');
-
-otherCount.addEventListener('input', (e) => {
-    const switchCount = formPage.querySelector('[name="switch-two"]:checked');
-    if (switchCount) {
-        switchCount.checked = false;
-    }
-
-    console.log(otherCount.valueAsNumber)
-    donateSumPage.innerHTML = otherCount.valueAsNumber
-})
-
-
-formPage.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = formPage.querySelector('[name="name"]');
-    const currency = formPage.querySelector('[name="currency"]');
-    const email = formPage.querySelector('[name="email"]');
-    const comment = formPage.querySelector('[name="comment"]');
-    const check = formPage.querySelector('[name="check"]');
-    const switchCount = formPage.querySelector('[name="switch-two"]:checked');
-
-
-    data = {
-        name: name.value,
-        currency: currency.value,
-        email: email.value,
-        comment: comment.value,
-        check: check.value,
-        otherCount: switchCount ? Number(switchCount.value) : Number(otherCount.value)
-    }
-
-    modalBtnSum.innerHTML = switchCount ? switchCount.value : otherCount.value
-})
 
 formModal.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -102,29 +58,6 @@ formModal.addEventListener('submit', (e) => {
     console.log(data);
 })
 
-const open = document.querySelector('.open-bank');
-const req = document.querySelectorAll('.req');
-
-req.forEach((el, index) => {
-    el.addEventListener('input', (e) => {
-        if (req[0].value.trim() !== '' && req[1].value.trim()  !== '' && req[2].value.trim()  !== '') {
-            open.setAttribute("data-bs-toggle", "modal");
-        } else {
-            open.removeAttribute("data-bs-toggle");
-        }
-    })
-})
-
-
-
-const donateSumPage = document.querySelector('.donateSumPage');
-
-
-
-const changePageCountHTML = ( count = 0, switchCount = 0) => {
-    count = count + switchCount
-    donateSumPage.innerHTML = count
-}
 
 const changeModalCountHTML = (count = 0, plusOneTh = 0) => {
     count = count + plusOneTh
@@ -135,21 +68,13 @@ const getInput = document.querySelectorAll('.switch-count')
 const increment = formModal.querySelector('.increment')
 const decrement = formModal.querySelector('.decrement')
 const numInput = formModal.querySelector('.input-number')
-const numInputPage = formPage.querySelector('.input-number')
 
-getInput.forEach(el => {
-    el.addEventListener('change', () => {
-        switchCount = Number(el.value)
-        // numInputPage.valueAsNumber = 0
-        changePageCountHTML(0, switchCount)
-    })
-})
 
 
 numInput.addEventListener('input', (e) => {
     return (
         count = numInput.valueAsNumber,
-        changeModalCountHTML(count, plusOneTh)
+            changeModalCountHTML(count, plusOneTh)
     )
 })
 
@@ -161,7 +86,7 @@ if(decrement && increment) {
         }
         return (
             numInput.value = count,
-            changeModalCountHTML(count, plusOneTh)
+                changeModalCountHTML(count, plusOneTh)
         )
     })
 

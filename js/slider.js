@@ -4,11 +4,11 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    // autoplay:
-    //     {
-    //         delay: time,
-    //         disableOnInteraction: false,
-    //     },
+    autoplay:
+        {
+            delay: time,
+            disableOnInteraction: false,
+        },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

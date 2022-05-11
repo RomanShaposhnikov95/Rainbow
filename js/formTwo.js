@@ -2,11 +2,10 @@ let data = {};
 let recipient = null;
 const formPage = document.querySelector('.normal-form');
 const formModal = document.querySelector('.modal-form');
-const modalBtnSum = formModal.querySelector('.donateSumModal')
+const modalBtnSum = formModal.querySelector('.donateSum')
 
 let count = 0
 let plusOneTh = 0
-let switchCount = 0
 
 const exampleModal = document.getElementById('exampleModal');
 exampleModal.addEventListener('show.bs.modal',  (event) => {
@@ -19,6 +18,7 @@ exampleModal.addEventListener('show.bs.modal',  (event) => {
 
     if (recipient === '@mdo') {
         modalBtnSum.innerHTML = '0'
+        plusOneTh = 0
         img.src = 'img/ic-holding-heart.svg';
         message.innerHTML = 'Пожертвовать';
         modalBody.forEach(el => {
@@ -37,19 +37,6 @@ exampleModal.addEventListener('show.bs.modal',  (event) => {
     }
 })
 
-const otherCount = formPage.querySelector('[name="other-count"]');
-
-otherCount.addEventListener('input', (e) => {
-    const switchCount = formPage.querySelector('[name="switch-two"]:checked');
-    if (switchCount) {
-        switchCount.checked = false;
-    }
-
-    console.log(otherCount.valueAsNumber)
-    donateSumPage.innerHTML = otherCount.valueAsNumber
-})
-
-
 formPage.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = formPage.querySelector('[name="name"]');
@@ -57,8 +44,7 @@ formPage.addEventListener('submit', (e) => {
     const email = formPage.querySelector('[name="email"]');
     const comment = formPage.querySelector('[name="comment"]');
     const check = formPage.querySelector('[name="check"]');
-    const switchCount = formPage.querySelector('[name="switch-two"]:checked');
-
+    const otherCount = formPage.querySelector('[name="other-count"]');
 
     data = {
         name: name.value,
@@ -66,10 +52,10 @@ formPage.addEventListener('submit', (e) => {
         email: email.value,
         comment: comment.value,
         check: check.value,
-        otherCount: switchCount ? Number(switchCount.value) : Number(otherCount.value)
+        otherCount: Number(otherCount.value) + plusOneTh
     }
 
-    modalBtnSum.innerHTML = switchCount ? switchCount.value : otherCount.value
+    modalBtnSum.innerHTML = Number(otherCount.value) + plusOneTh
 })
 
 formModal.addEventListener('submit', (e) => {
@@ -115,99 +101,77 @@ req.forEach((el, index) => {
     })
 })
 
+const formContainer = document.querySelectorAll('.form-container')
 
+formContainer.forEach(el => {
+    const numInput = el.querySelector('.input-number')
+    const decrement = el.querySelector('.decrement')
+    const increment = el.querySelector('.increment')
+    const more = el.querySelector('.more')
+    const alsoNeedHelp = el.querySelectorAll('.also-need-help')
+    const donateSum = el.querySelector('.donateSum')
 
-const donateSumPage = document.querySelector('.donateSumPage');
+    const changeCountHTML = (count = 0, plusOneTh = 0) => {
+        count = count + plusOneTh
+        donateSum.innerHTML = count
+    }
 
-
-
-const changePageCountHTML = ( count = 0, switchCount = 0) => {
-    count = count + switchCount
-    donateSumPage.innerHTML = count
-}
-
-const changeModalCountHTML = (count = 0, plusOneTh = 0) => {
-    count = count + plusOneTh
-    modalBtnSum.innerHTML = count
-}
-
-const getInput = document.querySelectorAll('.switch-count')
-const increment = formModal.querySelector('.increment')
-const decrement = formModal.querySelector('.decrement')
-const numInput = formModal.querySelector('.input-number')
-const numInputPage = formPage.querySelector('.input-number')
-
-getInput.forEach(el => {
-    el.addEventListener('change', () => {
-        switchCount = Number(el.value)
-        // numInputPage.valueAsNumber = 0
-        changePageCountHTML(0, switchCount)
+    numInput.addEventListener('input', () => {
+        return (
+            count = numInput.valueAsNumber ? numInput.valueAsNumber : 0,
+                changeCountHTML(count, plusOneTh)
+        )
     })
-})
 
-
-numInput.addEventListener('input', (e) => {
-    return (
-        count = numInput.valueAsNumber,
-        changeModalCountHTML(count, plusOneTh)
-    )
-})
-
-if(decrement && increment) {
     decrement.addEventListener('click', () => {
         count -= 1
-        if (count <= 0) {
+        if(count <= 0) {
             count = 0
         }
-        return (
-            numInput.value = count,
-            changeModalCountHTML(count, plusOneTh)
-        )
+        numInput.value = count,
+        changeCountHTML(count, plusOneTh)
     })
 
     increment.addEventListener('click', () => {
         count += 1
-        return (
+
             numInput.value = count,
-                changeModalCountHTML(count, plusOneTh)
-        )
+                changeCountHTML(count, plusOneTh)
+
     })
-}
 
-const alsoNeedHelp = formModal.querySelectorAll('.also-need-help')
-const more = formModal.querySelector('.more')
+    let n = 3
 
-let n = 3
+    const sortAlso = (n) => {
+        alsoNeedHelp.forEach((el, index) => {
+            if(index >= n) {
+                el.classList.add('display-none-class')
+            } else {
+                el.classList.remove('display-none-class')
 
-const sortAlso = (n) => {
-    alsoNeedHelp.forEach((el, index) => {
-        if(index >= n) {
-            el.classList.add('display-none-class')
-        } else {
-            el.classList.remove('display-none-class')
+            }
+        })
+    }
 
-        }
-    })
-}
-
-sortAlso(n)
-
-more.addEventListener('click', () => {
-    n = n + 3
     sortAlso(n)
-    more.classList.add('display-none-class')
+        more.addEventListener('click', () => {
+            n = n + 3
+            sortAlso(n)
+            more.classList.add('display-none-class')
+        })
+
+        alsoNeedHelp.forEach(el => {
+            el.addEventListener('click', () => {
+                el.classList.toggle('also-checked')
+                if(el.classList.contains('also-checked')) {
+                    plusOneTh = plusOneTh + 1000
+                } else {
+                    plusOneTh = plusOneTh - 1000
+                }
+                changeCountHTML(count, plusOneTh)
+            })
+        })
 })
 
 
-alsoNeedHelp.forEach(el => {
-    el.addEventListener('click', () => {
-        el.classList.toggle('also-checked')
-        if(el.classList.contains('also-checked')) {
-            plusOneTh = plusOneTh + 1000
-        } else {
-            plusOneTh = plusOneTh - 1000
-        }
-        return changeModalCountHTML(count, plusOneTh)
-    })
-})
 
