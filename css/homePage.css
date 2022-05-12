@@ -449,6 +449,7 @@ input::-webkit-inner-spin-button {
     padding: 11px 22px;
 }
 
+
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -474,6 +475,14 @@ select::-ms-expand {
     background-color: var(--white);
     border: 2px solid #665A52;
     padding: 11px 22px;
+}
+
+.input-text:hover, .input-wrap:hover, .input-wrap:hover *, .switch-field label:hover, .decrement:hover  {
+    background-color: #EBE3E2;
+}
+
+.increment:hover {
+    background-color: #665F5C;
 }
 
 .checkbox-container {
@@ -529,15 +538,7 @@ select::-ms-expand {
 }
 
 .checkbox-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    content: url("../img/ic-check.svg");
 }
 
 .form-top .btn {
@@ -976,14 +977,13 @@ select::-ms-expand {
     text-transform: uppercase;
 }
 
-.contact .contact-info-info a:hover {
+.contact .contact-info-info a:hover , .contactPage .contact-info-info a:hover {
     color: var(--orange);
 }
 
 /*banner------------------------------------------------------*/
 
 .banner {
-    /*margin-top: -32px;*/
     width: 100%;
     display: flex;
     justify-content: center;

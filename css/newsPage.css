@@ -25,12 +25,21 @@
 }
 
 .back:after {
-    content: "<";
+    content: url("../img/ic-totop (1).svg");
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -20px;
-    color: #CCB4A3;
+    top: 0;
+    transform: rotate(-90deg);
+    left: -24px;
+
+}
+
+.back:hover {
+    color: var(--orange);
+}
+
+.back:hover .back svg *{
+    fill: var(--orange);
+    stroke: var(--orange);
 }
 
 .newsPage-top-date svg{

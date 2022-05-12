@@ -2,7 +2,7 @@ body,html {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Sans', sans-serif;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 body {
@@ -13,9 +13,7 @@ body {
 html * {
     list-style-type: none;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
-    outline: none;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 :root {
@@ -94,9 +92,10 @@ html * {
     justify-content: center;
     align-items: center;
     transition: all .3s ease-in-out;
-    width: 60px;
+    /*width: 60px;*/
     height: 60px;
     margin-left: 10px;
+    cursor: pointer;
 }
 .menu-btn__burger {
     width: 24px;
@@ -120,14 +119,18 @@ html * {
 }
 
 .menu-btn.open .menu-btn__burger {
-    transform: translateX(-20px);
+    transform: translateX(-10px);
     background: transparent;
 }
 .menu-btn.open .menu-btn__burger::before {
-    transform: rotate(45deg) translate(15px, -15px);
+    transform: rotate(45deg) translate(5px, -5px);
 }
 .menu-btn.open .menu-btn__burger::after {
-    transform: rotate(-45deg) translate(15px, 15px);
+    transform: rotate(-45deg) translate(5px, 5px);
+}
+
+.menu-btn p {
+    margin: 0 0 0 10px;
 }
 
 ul, li *{
@@ -506,7 +509,7 @@ footer:before {
     bottom: 0;
     right: 0;
     height: 104px;
-    width: 17.8%;
+    width: 50%;
     background-color: rgba(153, 144, 138, 0.2);
     position: absolute;
     z-index: 1;
@@ -881,6 +884,11 @@ footer:before {
     font-size: 14px;
     letter-spacing: 0;
     line-height: 20px;
+    font-weight: 400;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--orange);
 }
 
 .breadcrumb-item.active {
@@ -894,7 +902,9 @@ footer:before {
 
 .breadcrumb-item+.breadcrumb-item::before {
     content: '»';
-    padding-right: 6px
+    padding-right: 6px;
+    color: #665A52;
+    opacity: 40%;
 }
 
 .subheader {
@@ -1052,9 +1062,15 @@ footer:before {
         margin-left: 20px;
     }
 
+    .toggleBtn {
+        display: flex;
+        align-items: center;
+    }
+
     .menu-btn {
         margin-right: 8px;
     }
+
 
     .header-languages {
         margin: 0 0 0 31px;
