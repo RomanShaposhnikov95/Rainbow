@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="44px" viewBox="0 0 34 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Marker</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01.01.-Homepage-/-Hovers" transform="translate(-533.000000, -4991.000000)">
+            <g id="News-+-Contacts" transform="translate(0.000000, 3863.000000)">
+                <g id="Contacts" transform="translate(245.000000, 867.000000)">
+                    <g id="Content" transform="translate(70.000000, 70.000000)">
+                        <g id="Marker" transform="translate(218.000000, 191.000000)">
+                            <path d="M17,0 C26.3888407,0 34,7.61115925 34,17 C34,22.5529713 31.3375729,27.4840995 27.2196094,30.5864938 L26.8926512,30.8266845 C24.9804193,32.1885766 23.3527796,33.9111138 22.1022545,35.8979626 L17,44 L11.9020254,35.9039908 C10.7333305,34.0439113 9.23332167,32.4159547 7.47893587,31.0982642 L7.04326938,30.7806234 C2.77608783,27.6921351 0,22.6702626 0,17 C0,7.61115925 7.61115925,0 17,0 Z" id="Path" fill="#FF5500"></path>
+                            <circle id="Oval" fill="#FFFFFF" cx="17" cy="17" r="4"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

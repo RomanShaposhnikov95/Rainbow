@@ -14,6 +14,7 @@ html * {
     list-style-type: none;
     text-decoration: none;
     font-family: 'IBM Plex Sans', sans-serif;
+    outline: none;
 }
 
 :root {
@@ -28,7 +29,8 @@ html * {
 
 .container-header {
     width: 100%;
-    max-width: 1740px;
+    max-width: 1780px;
+    padding: 0 20px;
 }
 
 .container-l {
@@ -877,7 +879,9 @@ footer:before {
     margin: 0;
     position: relative;
     padding-bottom: 20px;
+    font-size: 14px;
 }
+
 
 .breadcrumb-item a {
     color: var(--lightbrown);
@@ -1059,18 +1063,12 @@ footer:before {
     .logo-wrap {
         flex-direction: row;
         align-items: center;
-        margin-left: 20px;
     }
 
     .toggleBtn {
         display: flex;
         align-items: center;
     }
-
-    .menu-btn {
-        margin-right: 8px;
-    }
-
 
     .header-languages {
         margin: 0 0 0 31px;
@@ -1123,6 +1121,19 @@ footer:before {
 
 
 @media (max-width: 769px) {
+
+    .container-header {
+        padding: 0;
+    }
+
+    .logo-wrap {
+        margin-left: 20px;
+    }
+
+    .menu-btn {
+        margin-right: 20px;
+    }
+
     .hide-el {
         display: none;
     }

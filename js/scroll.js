@@ -3,6 +3,7 @@ const header = document.getElementById("header")
 const logoWrap = document.querySelector('.logo-wrap')
 const hl = document.querySelector('.header-languages')
 const menu = document.querySelector('.menu')
+const homePageHeader = document.querySelector(".header-home-page")
 
 
 window.onscroll = function () {
@@ -21,10 +22,8 @@ function scrollFunction() {
  document.documentElement.scrollTop;
 
 
-
 function scrollFunctionHeader() {
     if (document.documentElement.scrollTop >= 10) {
-        console.log(document.documentElement.scrollTop)
         header.style.cssText = 'box-shadow: 0 5px 10px 0 rgba(68,61,102,0.05); z-index: 1002; transition: all 0.2s';
         if (window.innerWidth > 1450) {
             header.style.padding = "16px 0 20px 0";
@@ -60,14 +59,18 @@ menuBtn.addEventListener('click', () => {
         menuBtn.classList.remove('open');
         menuOpen = false;
         if(window.innerWidth < 958) {
-            document.querySelector(".header-home-page").style.backgroundColor = "#F6EEED";
+            if (homePageHeader) {
+                homePageHeader.style.backgroundColor = "#F6EEED";
+            }
         }
     } else {
         menuBtn.classList.add('open');
         menuOpen = true;
 
         if(window.innerWidth < 958) {
-            document.querySelector(".header-home-page").style.backgroundColor = "#FFFFFF";
+            if (homePageHeader) {
+                homePageHeader.style.backgroundColor = "#FFFFFF";
+            }
         }
     }
 });

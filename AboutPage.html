@@ -238,7 +238,7 @@
                             <div class="descr-s">Классический текст Lorem Ipsum, используемый с XVI века, приведён ниже.</div>
                         </div>
                         <a class="download-item-right" href="#">
-                            <p class="descr-s">PDF документ (512KB)</p>
+                            <span class="descr-s">PDF документ (512KB)</span>
                             <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>AD15769D-B3E7-4CBC-81ED-D082B510EBC1</title>
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -268,7 +268,7 @@
                         </div>
                         <div class="download-item-right">
                             <a class="download-item-right" href="#">
-                                <p class="descr-s">PDF документ (1,5MB)</p>
+                                <span class="descr-s">PDF документ (1,5MB)</span>
                                 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <title>AD15769D-B3E7-4CBC-81ED-D082B510EBC1</title>
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -299,7 +299,7 @@
                         </div>
                         <div class="download-item-right">
                             <a class="download-item-right" href="#">
-                                <p class="descr-s">PDF документ (433KB)</p>
+                                <span class="descr-s">PDF документ (433KB)</span>
                                 <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <title>AD15769D-B3E7-4CBC-81ED-D082B510EBC1</title>
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -366,7 +366,7 @@
                         Выберите сумму пожертвования
                     </h3>
                     <div class="switch-field switch-field-count">
-                        <input class="switch-count" type="radio" id="radio-one-hundred" name="switch-two" value="100"/>
+                        <input class="switch-count" type="radio" id="radio-one-hundred" name="switch-two" value="100" checked/>
                         <label for="radio-one-hundred">100 <span class="currency">₽</span></label>
                         <input class="switch-count" type="radio" id="radio-three-hundred" name="switch-two" value="300" />
                         <label for="radio-three-hundred">300 <span class="currency">₽</span></label>
@@ -385,7 +385,7 @@
                         Другая сумма
                     </h3>
                     <div class="input-wrap">
-                        <input class="input-number" name="other-count" min="1" type="number">
+                        <input class="input-number" name="other-count" value="0" min="0" type="number">
                         <select id="cars" name="currency">
                             <option value="RUB">₽ (RUB)</option>
                             <option value="saab">€ (EUR)</option>
@@ -398,19 +398,19 @@
                         <h3 class="form-title required">
                             Ваше имя, фамилия
                         </h3>
-                        <input id="name" class="input-text req" name="name" type="text" >
+                        <input id="name" class="input-text req" name="name" type="text" required>
                     </div>
                     <div class="form-money-group-wrap">
                         <h3 class="form-title required">
                             Электронная почта
                         </h3>
-                        <input id="email" class="input-text req" name="email" type="email">
+                        <input id="email" class="input-text req" name="email" type="email" required>
                     </div>
                     <div class="form-money-group-wrap">
                         <h3 class="form-title required">
                             Ваши комментарии и пожелания
                         </h3>
-                        <textarea id="message" class="input-text req" name="comment" rows="1" ></textarea>
+                        <textarea id="message" class="input-text req" name="comment" rows="1" required></textarea>
                     </div>
                 </div>
                 <label class="checkbox-container">
@@ -419,7 +419,7 @@
                     <span class="checkmark"></span>
                 </label>
 
-                <button type="submit" name="btn" class="btn open-bank" data-bs-target="#exampleModal" data-bs-whatever="@fat">Помочь детям • <span class="donateSumPage">0</span> ₽</button>
+                <button type="submit" name="btn" class="btn open-bank" data-bs-target="#exampleModal" data-bs-whatever="@fat">Помочь детям • <span class="donateSum">0</span> ₽</button>
 
                 <div class="descr">
                     <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
@@ -754,7 +754,7 @@
                     </h3>
                     <div class="input-wrap-container">
                         <div class="input-wrap">
-                            <input class="input-number" name="other-count" min="1" type="number">
+                            <input class="input-number reqInput" name="other-count" min="1" type="number" required>
                             <select name="currency">
                                 <option value="RUB">₽ (RUB)</option>
                                 <option value="saab">€ (EUR)</option>
@@ -998,19 +998,19 @@
                         <h3 class="form-title required">
                             Ваше имя, фамилия
                         </h3>
-                        <input class="input-text" name="name" type="text">
+                        <input class="input-text reqInput" name="name" type="text" required>
                     </div>
                     <div class="form-money-group-wrap">
                         <h3 class="form-title required">
                             Электронная почта
                         </h3>
-                        <input class="input-text" name="email" type="email">
+                        <input class="input-text reqInput" name="email" type="email" required>
                     </div>
                     <div class="form-money-group-wrap">
                         <h3 class="form-title required">
                             Ваши комментарии и пожелания
                         </h3>
-                        <textarea class="input-text" name="comment" rows="1"></textarea>
+                        <textarea class="input-text reqInput" name="comment" rows="1" required></textarea>
                     </div>
                 </div>
                 <label class="checkbox-container justPay">
@@ -1019,7 +1019,7 @@
                     <span class="checkmark"></span>
                 </label>
 
-                <button type="submit" class="btn">Пожертвовать • <span class="donateSumModal">0</span> ₽</button>
+                <button type="submit" class="btn">Пожертвовать • <span class="donateSum donateSumModal">0</span> ₽</button>
                 <div class="descr justPay">
                     <span class="star-orange">*</span> Нажимая на кнопку "Помочь детям", вы принимаете
                     <a href="#" class="info-link">условия использования</a>
@@ -1052,7 +1052,7 @@
 <script src="js/slider.js"></script>
 <script src="js/indicator.js"></script>
 <script src="js/scroll.js"></script>
-<script src="js/form.js"></script>
+<script src="js/universalForm.js"></script>
 
 </body>
 </html>
