@@ -24,7 +24,7 @@ function scrollFunction() {
 
 function scrollFunctionHeader() {
     if (document.documentElement.scrollTop >= 10) {
-        header.style.cssText = 'box-shadow: 0 5px 10px 0 rgba(68,61,102,0.05); z-index: 1002; transition: all 0.2s';
+        header.style.cssText = 'box-shadow: 0 5px 10px 0 rgba(68,61,102,0.05); z-index: 1002; transition: none';
         if (window.innerWidth > 1450) {
             header.style.padding = "16px 0 20px 0";
             logoWrap.style.flexDirection = 'row'
@@ -33,7 +33,7 @@ function scrollFunctionHeader() {
             menu.style.marginLeft = '-83px'
         }
     } else {
-        header.style.cssText ='box-shadow: unset; z-index: 1000; transition: 0.1s';
+        header.style.cssText ='box-shadow: unset; z-index: 1000; transition: none';
         if (window.innerWidth > 1450) {
             header.style.padding = "26px 0 0 0";
             logoWrap.style.flexDirection = 'column'

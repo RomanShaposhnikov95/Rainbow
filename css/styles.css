@@ -632,6 +632,10 @@ footer:before {
     border: 2px solid #665A52;
 }
 
+.bank-orange input:checked + label {
+    border: 2px solid var(--orange) !important;
+}
+
 .modal-content .form-money-group .input-wrap {
     width: 100%;
     display: flex;
@@ -944,6 +948,7 @@ footer:before {
     left: 50%;
     right: 0;
     z-index: 1001;
+    background-color: var(--grey);
 }
 
 .bread-border:after {
@@ -954,6 +959,7 @@ footer:before {
     left: 0;
     right: 0;
     z-index: 1001;
+    background-color: var(--grey);
 }
 
 .page-general-img {

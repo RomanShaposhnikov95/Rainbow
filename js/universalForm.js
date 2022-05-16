@@ -5,6 +5,8 @@ const formModal = document.querySelector('.modal-form');
 const formPageTwo = document.querySelector('.normal-form-two');
 const donateSumModal = document.querySelector('.donateSumModal');
 const allInput = document.querySelectorAll('.reqInput');
+const modalContent = document.querySelector('.modal-content')
+const switchField = modalContent.querySelector('.switch-field')
 
 const exampleModal = document.getElementById('exampleModal');
 exampleModal.addEventListener('show.bs.modal',  (event) => {
@@ -23,6 +25,7 @@ exampleModal.addEventListener('show.bs.modal',  (event) => {
             if(el.classList.contains('justPay-show'))
                 el.classList.remove('justPay-show')
         })
+        switchField.classList.remove('bank-orange')
         allInput.forEach(el => {
             el.required = true
         })
@@ -34,6 +37,7 @@ exampleModal.addEventListener('show.bs.modal',  (event) => {
         modalBody.forEach(el => {
             el.classList.add('justPay-show')
         })
+        switchField.classList.add('bank-orange')
         allInput.forEach(el => {
             el.required = false
         })
